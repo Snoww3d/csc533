@@ -26,6 +26,26 @@ namespace CSC533
             this.Close();
         }
 
+        private void fowardChainDemoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           textBoxMain.Clear();
+            
+           textBoxMain.Text = "Forward Chainning Demo"; 
+        }
+
+        private void backwardChainingDemoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxMain.Clear();
+
+            textBoxMain.Text = "Backwards Chainning Demo"; 
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form about = new About();
+            about.Show();
+        }
+
        
 
         
