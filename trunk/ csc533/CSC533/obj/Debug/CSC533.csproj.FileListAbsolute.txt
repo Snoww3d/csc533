@@ -1,0 +1,8 @@
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\bin\Debug\CSC533.exe
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\bin\Debug\CSC533.pdb
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\CSC533.MainForm.resources
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\CSC533.Properties.Resources.resources
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\CSC533.csproj.GenerateResource.Cache
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\CSC533.exe
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\CSC533.pdb
