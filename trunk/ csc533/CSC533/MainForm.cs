@@ -48,6 +48,9 @@ namespace CSC533
             about.Show();
         }
 
+        //Add the rule that the use has typed into the entry text box to the knowledgebase
+        //Format: "symbol" or "conjunction => symbol" using ^ for "AND" and = for "=>"
+        //e.g. A, A*B=C
         private void addRuleButton_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(entryTextBox.Text))
@@ -56,11 +59,13 @@ namespace CSC533
                 string consequent = "";
                 Rule rule;
 
+                //Split the entered rule first by '=' and then by '^'
+                //Left hand terms go into antecedents list; right hand side goes to consequent
                 if (entryTextBox.Text.Contains('='))
                 {
                     string[] major = entryTextBox.Text.Split('=');
                     consequent = major[1].Trim();
-                    string[] minor = major[0].Split('*');
+                    string[] minor = major[0].Split('^');
                     foreach (string term in minor)
                     {
                         antecedents.Add(term.Trim());
@@ -71,14 +76,25 @@ namespace CSC533
                     consequent = entryTextBox.Text.Trim();
                 }
 
-                rule = new Rule(antecedents, consequent);
-                if (!knowledgebase.ContainsRule(rule))
+                //Check for errors in format here
+                if (consequent.Contains('^') || antecedents.Contains(""))
                 {
-                    knowledgebase.Tell(rule);
-                    ruleListBox.Items.Add(rule);
+                    MessageBox.Show("Invalid rule format.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+
+                //If everything checks out, create the rule and enter it into knowledgebase
                 else
-                    MessageBox.Show("That rule already exists.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                {                    
+                    rule = new Rule(antecedents, consequent);
+                    if (!knowledgebase.ContainsRule(rule))
+                    {
+                        knowledgebase.Tell(rule);
+                        ruleListBox.Items.Add(rule);
+                        entryTextBox.Clear();
+                    }
+                    else
+                        MessageBox.Show("That rule already exists.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
             }
         }
 
@@ -126,6 +142,16 @@ namespace CSC533
                 }
 
                 resultLabel.Visible = true;
+            }
+        }
+
+        //Support pressing enter key in entry text box.
+        //Question: why does system play default beep when pressing enter?
+        private void entryTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                addRuleButton_Click(sender, e);
             }
         }
 
