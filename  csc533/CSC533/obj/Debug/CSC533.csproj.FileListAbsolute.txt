@@ -9,3 +9,10 @@ C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\CS
 C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC533\CSC533\obj\Debug\CSC533.About.resources
 C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\obj\Debug\CSC533.exe
 C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\obj\Debug\CSC533.pdb
+C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\obj\Debug\CSC533.About.resources
+C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\obj\Debug\CSC533.MainForm.resources
+C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\obj\Debug\CSC533.Properties.Resources.resources
+C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\obj\Debug\CSC533.csproj.GenerateResource.Cache
+C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\bin\Debug\CSC533.exe
+C:\Users\Chris Townsend\Desktop\CSC 533 - Project 1\CSC533\bin\Debug\CSC533.pdb
