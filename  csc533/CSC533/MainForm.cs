@@ -50,33 +50,36 @@ namespace CSC533
 
         private void addRuleButton_Click(object sender, EventArgs e)
         {
-            List<string> antecedents = new List<string>();
-            string consequent = "";
-            Rule rule;
-
-            if (entryTextBox.Text.Contains('='))
+            if (!String.IsNullOrEmpty(entryTextBox.Text))
             {
-                string[] major = entryTextBox.Text.Split('=');
-                consequent = major[1].Trim();
-                string[] minor = major[0].Split('*');
-                foreach (string term in minor)
+                List<string> antecedents = new List<string>();
+                string consequent = "";
+                Rule rule;
+
+                if (entryTextBox.Text.Contains('='))
                 {
-                    antecedents.Add(term.Trim());
+                    string[] major = entryTextBox.Text.Split('=');
+                    consequent = major[1].Trim();
+                    string[] minor = major[0].Split('*');
+                    foreach (string term in minor)
+                    {
+                        antecedents.Add(term.Trim());
+                    }
                 }
-            }
-            else
-            {
-                consequent = entryTextBox.Text.Trim();
-            }
+                else
+                {
+                    consequent = entryTextBox.Text.Trim();
+                }
 
-            rule = new Rule(antecedents, consequent);
-            if (!knowledgebase.ContainsRule(rule))
-            {
-                knowledgebase.Tell(rule);
-                ruleListBox.Items.Add(rule);
+                rule = new Rule(antecedents, consequent);
+                if (!knowledgebase.ContainsRule(rule))
+                {
+                    knowledgebase.Tell(rule);
+                    ruleListBox.Items.Add(rule);
+                }
+                else
+                    MessageBox.Show("That rule already exists.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            else
-                MessageBox.Show("That rule already exists.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void removeRuleButton_Click(object sender, EventArgs e)
