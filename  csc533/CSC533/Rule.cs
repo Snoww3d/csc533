@@ -16,9 +16,6 @@ namespace CSC533
         //Constructor
         public Rule(List<string> antecedents, string consequent)
         {
-            if (antecedents.Count == 1)
-                throw new ArgumentException("Single antecedent not allowed");
-
             this.Antecedents = antecedents;
             this.Consequent = consequent;
 

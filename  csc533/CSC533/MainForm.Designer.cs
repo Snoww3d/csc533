@@ -138,6 +138,8 @@
             this.entryTextBox.Name = "entryTextBox";
             this.entryTextBox.Size = new System.Drawing.Size(100, 20);
             this.entryTextBox.TabIndex = 4;
+            this.entryTextBox.Text = "Enter rule here...";
+            this.entryTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entryTextBox_KeyPress);
             // 
             // addRuleButton
             // 
