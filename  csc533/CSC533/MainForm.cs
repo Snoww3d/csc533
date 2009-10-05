@@ -87,6 +87,7 @@ namespace CSC533
             }
         }
 
+        //Remove the selected rule from the knowledgebase
         private void removeRuleButton_Click(object sender, EventArgs e)
         {
             if (ruleListBox.SelectedItem != null)
@@ -99,6 +100,7 @@ namespace CSC533
             }
         }
 
+        //Evaluate query by forward chaining
         private void forwardButton_Click(object sender, EventArgs e)
         {
             string query = queryTextBox.Text.Trim();
@@ -118,6 +120,7 @@ namespace CSC533
             }
         }
 
+        //Evaluate query by backward chaining
         private void backwardButton_Click(object sender, EventArgs e)
         {
             string query = queryTextBox.Text.Trim();
