@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fowardChainDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backwardChainingDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fowardChainDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backwardChainingDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxMain = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,20 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // fowardChainDemoToolStripMenuItem
+            // 
+            this.fowardChainDemoToolStripMenuItem.Name = "fowardChainDemoToolStripMenuItem";
+            this.fowardChainDemoToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.fowardChainDemoToolStripMenuItem.Text = "Foward Chaining Demo";
+            this.fowardChainDemoToolStripMenuItem.Click += new System.EventHandler(this.fowardChainDemoToolStripMenuItem_Click);
+            // 
+            // backwardChainingDemoToolStripMenuItem
+            // 
+            this.backwardChainingDemoToolStripMenuItem.Name = "backwardChainingDemoToolStripMenuItem";
+            this.backwardChainingDemoToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.backwardChainingDemoToolStripMenuItem.Text = "Backward Chaining Demo";
+            this.backwardChainingDemoToolStripMenuItem.Click += new System.EventHandler(this.backwardChainingDemoToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -79,20 +93,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
-            // 
-            // fowardChainDemoToolStripMenuItem
-            // 
-            this.fowardChainDemoToolStripMenuItem.Name = "fowardChainDemoToolStripMenuItem";
-            this.fowardChainDemoToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.fowardChainDemoToolStripMenuItem.Text = "Foward Chaining Demo";
-            this.fowardChainDemoToolStripMenuItem.Click += new System.EventHandler(this.fowardChainDemoToolStripMenuItem_Click);
-            // 
-            // backwardChainingDemoToolStripMenuItem
-            // 
-            this.backwardChainingDemoToolStripMenuItem.Name = "backwardChainingDemoToolStripMenuItem";
-            this.backwardChainingDemoToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.backwardChainingDemoToolStripMenuItem.Text = "Backward Chaining Demo";
-            this.backwardChainingDemoToolStripMenuItem.Click += new System.EventHandler(this.backwardChainingDemoToolStripMenuItem_Click);
             // 
             // textBoxMain
             // 
