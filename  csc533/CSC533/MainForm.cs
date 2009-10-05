@@ -49,43 +49,15 @@ namespace CSC533
         }
 
         //Add the rule that the use has typed into the entry text box to the knowledgebase
-        //Format: "symbol" or "conjunction => symbol" using ^ for "AND" and = for "=>"
-        //e.g. A, A*B=C
         private void addRuleButton_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(entryTextBox.Text))
             {
-                List<string> antecedents = new List<string>();
-                string consequent = "";
-                Rule rule;
-
-                //Split the entered rule first by '=' and then by '^'
-                //Left hand terms go into antecedents list; right hand side goes to consequent
-                if (entryTextBox.Text.Contains('='))
-                {
-                    string[] major = entryTextBox.Text.Split('=');
-                    consequent = major[1].Trim();
-                    string[] minor = major[0].Split('^');
-                    foreach (string term in minor)
-                    {
-                        antecedents.Add(term.Trim());
-                    }
-                }
-                else
-                {
-                    consequent = entryTextBox.Text.Trim();
-                }
-
-                //Check for errors in format here
-                if (consequent.Contains('^') || antecedents.Contains(""))
-                {
-                    MessageBox.Show("Invalid rule format.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-
-                //If everything checks out, create the rule and enter it into knowledgebase
-                else
+                Rule rule = parseRule(entryTextBox.Text);
+                
+                //If parsing was successful, enter rule into knowledgebase
+                if (rule != null)
                 {                    
-                    rule = new Rule(antecedents, consequent);
                     if (!knowledgebase.ContainsRule(rule))
                     {
                         knowledgebase.Tell(rule);
@@ -102,6 +74,7 @@ namespace CSC533
         {
             if (ruleListBox.SelectedItem != null)
             {
+                entryTextBox.Text = ruleListBox.SelectedItem.ToString();
                 knowledgebase.Remove((Rule)ruleListBox.SelectedItem);
                 ruleListBox.Items.RemoveAt(ruleListBox.SelectedIndex);
             }
@@ -155,9 +128,48 @@ namespace CSC533
             }
         }
 
-       
 
-        
+        //Parses a string and returns a rule. If input is invalid, returns null.
+        //Format: Either (symbol) or (conjunction => symbol) using ^ for "AND" and = for "=>"
+        //e.g. "A", "A^B=C"
+        private Rule parseRule(string input)
+        {
+            List<string> antecedents = new List<string>();
+            string consequent = "";
+
+            input = input.ToUpper();
+            input = input.Replace('˄', '^');
+            input = input.Replace("=>", "=");
+
+            //Split the input first by '=' and then by '^'
+            //Left hand terms go into antecedents list; right hand side goes to consequent
+            if (input.Contains('='))
+            {
+                string[] major = input.Split('=');
+                consequent = major[1].Trim();
+                string[] minor = major[0].Split('^');
+                foreach (string term in minor)
+                {
+                    antecedents.Add(term.Trim());
+                }
+            }
+            else
+            {
+                consequent = input.Trim();
+            }
+
+            //Check for errors in format here
+            if (consequent.Contains('^') || antecedents.Contains(""))
+            {
+                MessageBox.Show("Invalid rule format.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return null;
+            }
+            else
+            {
+                return (new Rule(antecedents, consequent));
+            }
+
+        }       
        
     }
 }
