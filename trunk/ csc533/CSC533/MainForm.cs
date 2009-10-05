@@ -30,12 +30,14 @@ namespace CSC533
             openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text Files (*.txt)|*.txt";
             openFileDialog.FileName = "Knowledgebase.txt";
+            openFileDialog.InitialDirectory = @"..\..\";
             openFileDialog.CheckFileExists = true;
             openFileDialog.CheckPathExists = true;
 
             saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
             saveFileDialog.FileName = "Knowledgebase.txt";
+            saveFileDialog.InitialDirectory = @"..\..\";
         }
 
         private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
