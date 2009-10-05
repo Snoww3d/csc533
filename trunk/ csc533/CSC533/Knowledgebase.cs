@@ -48,13 +48,13 @@ namespace CSC533
                 }
             }
         }
-        
+
 
         //Use forward chaining to determine the truth of a symbol
         public bool AskForward(string symbol)
         {
             throw new NotImplementedException();
-            
+
         }
 
 
@@ -71,14 +71,25 @@ namespace CSC533
         {
             List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
 
-            //Evaluate all rules with this conclusion until either one is true
+            //Evaluate all rules with this conclusion until either a rule is true
             //or we run out of rules.
             foreach (Rule rule in rulesWithConclusion)
             {
-                if (!visitedRules.ContainsKey(rule))
+                //Check if rule has already been visited
+                if (visitedRules.ContainsKey(rule))
+                {
+                    //Already known to be true
+                    if (visitedRules[rule])
+                        return true;
+
+                    //Cycle in graph; skip this rule to avoid infinite loop
+                    else
+                        continue;
+                }
+                else
                 {
                     visitedRules.Add(rule, false);
-                }          
+                }
 
                 //If the rule is a symbol, it is a known true. This is one base case.
                 if (rule.IsSymbol())
@@ -93,30 +104,14 @@ namespace CSC533
                     bool result = true;
 
                     //Evaluate each term in the antecedents of this rule
+                    //and accumulate the result
                     foreach (string term in rule.Antecedents)
                     {
-                        //If an antecedent is a rule that has already been considered, it must
-                        //be considered false (skipped) if unknown or true if known true.
-                        //This eliminates the problem with cycles in the graph.
-                        bool notVisited = true;
-                        bool previouslyTrue = false;
-                        foreach (Rule potentialCycleRule in findRulesWithConclusion(term))
-                        {
-                            if (visitedRules.ContainsKey(potentialCycleRule))
-                            {
-                                if (visitedRules[potentialCycleRule])
-                                    previouslyTrue = true;
-                                notVisited = false;
-                            }
-                        }
-
-                        //Add term to the accumulating conjunction for this rule
-                        if (notVisited)
-                            result = result && check(term);
-                        else
-                            result = result && previouslyTrue;
+                        result = result && check(term);
                     }
 
+                    //If all terms are true, we can return true; otherwise, go
+                    //to the next rule.
                     if (result)
                     {
                         visitedRules[rule] = true;
@@ -134,7 +129,7 @@ namespace CSC533
         private List<Rule> findRulesWithConclusion(string symbol)
         {
             List<Rule> result = new List<Rule>();
-            
+
             foreach (Rule rule in rules)
             {
                 if (rule.Consequent == symbol)
