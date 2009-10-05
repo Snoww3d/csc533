@@ -46,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.resultLabel = new System.Windows.Forms.Label();
             this.ruleListBox = new System.Windows.Forms.ListBox();
+            this.openButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,14 +138,14 @@
             // 
             this.entryTextBox.Location = new System.Drawing.Point(231, 28);
             this.entryTextBox.Name = "entryTextBox";
-            this.entryTextBox.Size = new System.Drawing.Size(100, 20);
+            this.entryTextBox.Size = new System.Drawing.Size(156, 20);
             this.entryTextBox.TabIndex = 4;
             this.entryTextBox.Text = "Enter rule here...";
             this.entryTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entryTextBox_KeyPress);
             // 
             // addRuleButton
             // 
-            this.addRuleButton.Location = new System.Drawing.Point(338, 27);
+            this.addRuleButton.Location = new System.Drawing.Point(393, 26);
             this.addRuleButton.Name = "addRuleButton";
             this.addRuleButton.Size = new System.Drawing.Size(75, 23);
             this.addRuleButton.TabIndex = 5;
@@ -153,7 +155,7 @@
             // 
             // removeRuleButton
             // 
-            this.removeRuleButton.Location = new System.Drawing.Point(338, 260);
+            this.removeRuleButton.Location = new System.Drawing.Point(393, 260);
             this.removeRuleButton.Name = "removeRuleButton";
             this.removeRuleButton.Size = new System.Drawing.Size(75, 23);
             this.removeRuleButton.TabIndex = 7;
@@ -203,14 +205,36 @@
             this.ruleListBox.FormattingEnabled = true;
             this.ruleListBox.Location = new System.Drawing.Point(231, 55);
             this.ruleListBox.Name = "ruleListBox";
-            this.ruleListBox.Size = new System.Drawing.Size(182, 199);
+            this.ruleListBox.Size = new System.Drawing.Size(237, 199);
             this.ruleListBox.TabIndex = 12;
+            // 
+            // openButton
+            // 
+            this.openButton.Location = new System.Drawing.Point(231, 260);
+            this.openButton.Name = "openButton";
+            this.openButton.Size = new System.Drawing.Size(75, 23);
+            this.openButton.TabIndex = 13;
+            this.openButton.Text = "Open...";
+            this.openButton.UseVisualStyleBackColor = true;
+            this.openButton.Click += new System.EventHandler(this.openButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(312, 260);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 14;
+            this.saveButton.Text = "Save...";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 291);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.openButton);
             this.Controls.Add(this.ruleListBox);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.label2);
@@ -254,6 +278,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.ListBox ruleListBox;
+        private System.Windows.Forms.Button openButton;
+        private System.Windows.Forms.Button saveButton;
     }
 }
 

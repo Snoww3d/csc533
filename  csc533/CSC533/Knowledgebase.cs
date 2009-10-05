@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CSC533
 {
@@ -52,10 +53,43 @@ namespace CSC533
         }
 
         //Use backward chaining to determine the truth of a symbol
-        public bool AskBackward(string symbol)
+        public bool AskBackward(string conclusion)
         {
-            throw new NotImplementedException();
+            List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
+
+            foreach (Rule rule in rulesWithConclusion)
+            {
+                if (rule.IsSymbol())
+                    return true;
+                else
+                {
+                    bool result = true; //not sure about this
+
+                    foreach (string term in rule.Antecedents)
+                        result = result && AskBackward(term);
+
+                    if (result)
+                        return true;                                        
+                }
+            }
+
+            return false;            
+        }
+
+        //Creates a list of all rules that have the specified conclusion
+        private List<Rule> findRulesWithConclusion(string symbol)
+        {
+            List<Rule> result = new List<Rule>();
             
+            foreach (Rule rule in rules)
+            {
+                if (rule.Consequent == symbol)
+                {
+                    result.Add(rule);
+                }
+            }
+
+            return result;
         }
 
         //Override toString() method to output all rules as a string
@@ -82,6 +116,15 @@ namespace CSC533
             }
 
             return false;
+        }
+
+        //Write the knowledgebase as text to the specified StreamWriter
+        public void SaveToText(StreamWriter writer)
+        {
+            foreach (Rule rule in rules)
+            {
+                writer.WriteLine(rule.ToString());
+            }
         }
     }
 }
