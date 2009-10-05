@@ -12,6 +12,7 @@ namespace CSC533
     public class Knowledgebase
     {
         private List<Rule> rules;
+        //public List<Rule> Rules { get { return rules; } }
 
         //Constructor
         public Knowledgebase()
@@ -22,7 +23,7 @@ namespace CSC533
         //Add a rule to the knowledgebase
         public void Tell(Rule rule)
         {
-            if (!containsRule(rule))
+            if (!ContainsRule(rule))
                 rules.Add(rule);
             else
                 MessageBox.Show("That rule already exists.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -31,11 +32,14 @@ namespace CSC533
         //Remove a rule from the knowledgebase
         public void Remove(Rule rule)
         {
-            for (int i = 0; i < rules.Count; i++)
+            int limit = rules.Count;
+
+            for (int i = 0; i < limit; i++)
             {
                 if (rules[i].Equals(rule))
                 {
                     rules.RemoveAt(i);
+                    limit--;
                 }
             }
         }
@@ -55,7 +59,7 @@ namespace CSC533
         }
 
         //Override toString() method to output all rules as a string
-        public string ToString()
+        public override string ToString()
         {
             string result = "";
             foreach (Rule rule in rules)
@@ -67,9 +71,9 @@ namespace CSC533
             return result;
         }
 
-        //Helper method. Returns true if the knowledgebase contains the rule specified
+        //Returns true if the knowledgebase contains the rule specified
         //in the parameter.
-        private bool containsRule(Rule rule)
+        public bool ContainsRule(Rule rule)
         {
             foreach (Rule comparedRule in rules)
             {

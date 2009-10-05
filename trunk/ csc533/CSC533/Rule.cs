@@ -34,9 +34,12 @@ namespace CSC533
 
         //Checks if this rule is equivalent to another rule
         //Note: works because antecedents are sorted
-        public override bool Equals(Rule rule)
+        public bool Equals(Rule rule)
         {
             if (rule.Consequent != this.Consequent)
+                return false;
+
+            if (rule.Antecedents.Count != this.Antecedents.Count)
                 return false;
             
             int i = 0;
@@ -53,7 +56,7 @@ namespace CSC533
         }
 
         //Override ToString() method to output the rule in a fairly pretty format
-        public string ToString()
+        public override string ToString()
         {
             string result = "";
             if (IsSymbol())
