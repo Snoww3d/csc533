@@ -36,7 +36,7 @@ namespace CSC533
         //Note: works because antecedents are sorted
         public override bool Equals(Rule rule)
         {
-            if (rule.Consequent == this.Consequent)
+            if (rule.Consequent != this.Consequent)
                 return false;
             
             int i = 0;
