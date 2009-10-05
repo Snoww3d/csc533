@@ -11,6 +11,8 @@ namespace CSC533
 {
     public partial class MainForm : Form
     {
+        private Knowledgebase knowledgebase;
+
         public MainForm()
         {
             InitializeComponent();
@@ -18,7 +20,7 @@ namespace CSC533
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            knowledgebase = new Knowledgebase();
         }
 
         private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
