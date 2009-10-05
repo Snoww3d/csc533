@@ -54,20 +54,14 @@ namespace CSC533
             
         }
 
-        //Override toString() method to output all rules in fairly pretty format
+        //Override toString() method to output all rules as a string
         public string ToString()
         {
             string result = "";
             foreach (Rule rule in rules)
             {
-                foreach (string term in rule.Antecedents)
-                {
-                    result += term;
-                    if (term != rule.Antecedents.Last())
-                        result += " ˄ ";
-                }
-
-                result += " => " + rule.Consequent + "\n\r";
+                result += rule.ToString();
+                result += "\n\r";
             }
 
             return result;

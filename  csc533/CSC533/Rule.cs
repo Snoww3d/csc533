@@ -51,5 +51,28 @@ namespace CSC533
             return true;
 
         }
+
+        //Override ToString() method to output the rule in a fairly pretty format
+        public string ToString()
+        {
+            string result = "";
+            if (IsSymbol())
+            {
+                result = Consequent;
+            }
+            else
+            {
+                foreach (string term in Antecedents)
+                {
+                    result += term;
+                    if (term != Antecedents.Last())
+                        result += " ˄ ";
+                }
+
+                result += " => " + Consequent;
+            }
+            
+            return result;
+        }
     }
 }
