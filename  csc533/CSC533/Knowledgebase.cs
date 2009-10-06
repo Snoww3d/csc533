@@ -86,7 +86,10 @@ namespace CSC533
                         inferred.Add(s, false);
 
                 if (rule.IsSymbol())
+                {
+                    MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
                     agenda.Push(rule.Conclusion);
+                }
                 else
                     count.Add(rule, rule.Premises.Count());
             }
@@ -106,7 +109,10 @@ namespace CSC533
                         {
                             count[rule]--;
                             if (count[rule] == 0)
+                            {
                                 agenda.Push(rule.Conclusion);
+                                MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
+                            }
                         }
                     }
                 }
