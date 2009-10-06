@@ -86,19 +86,10 @@ namespace CSC533
                         inferred.Add(s, false);
 
                 if (rule.IsSymbol())
-<<<<<<< .mine
-                {
-=======
                 {
                     MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
->>>>>>> .r21
                     agenda.Push(rule.Conclusion);
-<<<<<<< .mine
-                    MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
                 }
-=======
-                }
->>>>>>> .r21
                 else
                     count.Add(rule, rule.Premises.Count());
             }
