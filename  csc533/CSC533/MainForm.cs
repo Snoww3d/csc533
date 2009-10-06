@@ -60,7 +60,7 @@ namespace CSC533
             about.Show();
         }
 
-        //Add the rule that the use has typed into the entry text box to the knowledgebase
+        //Add the rule that the user has typed into the entry text box to the knowledgebase
         private void addRuleButton_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(entryTextBox.Text))
@@ -107,14 +107,10 @@ namespace CSC533
             if (!String.IsNullOrEmpty(query))
             {
                 if (knowledgebase.AskForward(query.ToUpper()))
-                {
                     resultLabel.Text = "True";
-                }
                 else
-                {
                     resultLabel.Text = "False";
-                }
-
+                
                 resultLabel.Visible = true;
             }
         }
@@ -129,13 +125,9 @@ namespace CSC533
             if (!String.IsNullOrEmpty(query))
             {
                 if (knowledgebase.AskBackward(query.ToUpper()))
-                {
                     resultLabel.Text = "True";
-                }
                 else
-                {
                     resultLabel.Text = "False";
-                }
 
                 resultLabel.Visible = true;
             }
@@ -157,39 +149,39 @@ namespace CSC533
         //e.g. "A", "A^B=C"
         private Rule parseRule(string input)
         {
-            List<string> antecedents = new List<string>();
-            string consequent = "";
+            List<string> premises = new List<string>();
+            string conclusion = "";
 
             input = input.ToUpper();
             input = input.Replace('˄', '^');
             input = input.Replace("=>", "=");
 
             //Split the input first by '=' and then by '^'
-            //Left hand terms go into antecedents list; right hand side goes to consequent
+            //Left hand terms go into premises list; right hand side goes to conclusion
             if (input.Contains('='))
             {
                 string[] major = input.Split('=');
-                consequent = major[1].Trim();
+                conclusion = major[1].Trim();
                 string[] minor = major[0].Split('^');
                 foreach (string term in minor)
                 {
-                    antecedents.Add(term.Trim());
+                    premises.Add(term.Trim());
                 }
             }
             else
             {
-                consequent = input.Trim();
+                conclusion = input.Trim();
             }
 
             //Check for errors in format here
-            if (consequent.Contains('^') || antecedents.Contains(""))
+            if (conclusion.Contains('^') || premises.Contains(""))
             {
                 MessageBox.Show("Invalid rule format.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return null;
             }
             else
             {
-                return (new Rule(antecedents, consequent));
+                return (new Rule(premises, conclusion));
             }
 
         }
