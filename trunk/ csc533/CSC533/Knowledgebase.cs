@@ -15,7 +15,7 @@ namespace CSC533
         private List<Rule> rules;                       //main list of rules
         //public List<Rule> Rules { get { return rules; } }
         private Dictionary<Rule, bool> inferredRules;   //list of rules proved true -- used during forward chaining
-        private Dictionary<Rule, bool> visitedRules;    //list of rules visited--used during chaining
+        private Dictionary<Rule, bool> visitedRules;    //list of rules visited -- used during backward chaining
 
 
         //Constructor
@@ -58,38 +58,37 @@ namespace CSC533
             return entails(symbol);
         }
 
-       
-
 
         //Use backward chaining to determine the truth of a symbol
-        public bool AskBackward(string conclusion)
+        public bool AskBackward(string symbol)
         {
             visitedRules = new Dictionary<Rule, bool>();
-            return check(conclusion);
+            return check(symbol);
         }
+
 
         //Forward Chaining Algorithm
         private bool entails(string symbol)
         {
-                
+
             Dictionary<Rule, int> count;        // a table indexed by clause, initially the number of permises
             Dictionary<string, bool> inferred;  // a table indexed by symbol, each entry intially false;
             Stack<string> agenda;               // a list of symbols, initially the symbols known to be true in KB
 
-            count = new Dictionary<Rule,int>();
+            count = new Dictionary<Rule, int>();
             inferred = new Dictionary<string, bool>();
             agenda = new Stack<string>();
 
-            foreach(Rule rule in rules)
+            foreach (Rule rule in rules)
             {
-                foreach (string s in rule.Antecedents)
+                foreach (string s in rule.Premises)
                     if (!inferred.ContainsKey(s))
                         inferred.Add(s, false);
-                
+
                 if (rule.IsSymbol())
-                    agenda.Push(rule.Consequent);
+                    agenda.Push(rule.Conclusion);
                 else
-                    count.Add(rule, rule.Antecedents.Count());
+                    count.Add(rule, rule.Premises.Count());
             }
 
 
@@ -97,17 +96,17 @@ namespace CSC533
             {
                 string P = agenda.Pop();
                 if (P == symbol) return true;
-                
-                if(inferred.ContainsKey(P) && !inferred[P])
+
+                if (inferred.ContainsKey(P) && !inferred[P])
                 {
                     inferred[P] = true;
                     foreach (Rule rule in rules)
                     {
-                        if (rule.Antecedents.Contains(P))
+                        if (rule.Premises.Contains(P))
                         {
                             count[rule]--;
                             if (count[rule] == 0)
-                                agenda.Push(rule.Consequent);
+                                agenda.Push(rule.Conclusion);
                         }
                     }
                 }
@@ -117,7 +116,7 @@ namespace CSC533
             return false;
         }
 
-    
+
 
         //Backward chaining algorithm
         private bool check(string conclusion)
@@ -129,7 +128,14 @@ namespace CSC533
             foreach (Rule rule in rulesWithConclusion)
             {
                 MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
-                
+
+                //If the rule is a symbol, it is a known true. This is one base case.
+                if (rule.IsSymbol())
+                {
+                    visitedRules[rule] = true;
+                    return true;
+                }
+
                 //Check if rule has already been visited
                 if (visitedRules.ContainsKey(rule))
                 {
@@ -146,32 +152,20 @@ namespace CSC533
                     visitedRules.Add(rule, false);
                 }
 
-                //If the rule is a symbol, it is a known true. This is one base case.
-                if (rule.IsSymbol())
+                //If the rule is not a symbol and hasn't been visited, recursively evaluate it
+                bool result = true;
+
+                //Evaluate each term in the premises of this rule and accumulate the result
+                foreach (string term in rule.Premises)
+                {
+                    result = result && check(term);
+                }
+
+                //If all terms are true, we can return true; otherwise, go to the next rule.
+                if (result)
                 {
                     visitedRules[rule] = true;
                     return true;
-                }
-
-                //Otherwise we recursively evaluate the rule
-                else
-                {
-                    bool result = true;
-
-                    //Evaluate each term in the antecedents of this rule
-                    //and accumulate the result
-                    foreach (string term in rule.Antecedents)
-                    {
-                        result = result && check(term);
-                    }
-
-                    //If all terms are true, we can return true; otherwise, go
-                    //to the next rule.
-                    if (result)
-                    {
-                        visitedRules[rule] = true;
-                        return true;
-                    }
                 }
             }
 
@@ -187,7 +181,7 @@ namespace CSC533
 
             foreach (Rule rule in rules)
             {
-                if (rule.Consequent == symbol)
+                if (rule.Conclusion == symbol)
                 {
                     result.Add(rule);
                 }

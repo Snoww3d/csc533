@@ -10,39 +10,39 @@ namespace CSC533
     //Proposition symbols are represented by a rule with an empty left side
     public class Rule
     {
-        public List<string> Antecedents;    //list of left-hand symbols
-        public string Consequent;           //right-hand symbol
+        public List<string> Premises;       //list of left-hand symbols
+        public string Conclusion;           //right-hand symbol
 
         //Constructor
-        public Rule(List<string> antecedents, string consequent)
+        public Rule(List<string> premises, string conclusion)
         {
-            this.Antecedents = antecedents;
-            this.Consequent = consequent;
+            this.Premises = premises;
+            this.Conclusion = conclusion;
 
-            antecedents.Sort();
+            this.Premises.Sort();
         }
 
-        //Returns true if the rule has no antecedents
+        //Returns true if the rule has no premises
         //This means it is a proposition symbol
         public bool IsSymbol()
         {
-            return (Antecedents.Count == 0);
+            return (Premises.Count == 0);
         }
 
         //Checks if this rule is equivalent to another rule
-        //Note: works because antecedents are sorted
+        //Note: works because premises are sorted
         public bool Equals(Rule rule)
         {
-            if (rule.Consequent != this.Consequent)
-                return false;
-
-            if (rule.Antecedents.Count != this.Antecedents.Count)
+            if (rule.Premises.Count != this.Premises.Count)
                 return false;
             
+            if (rule.Conclusion != this.Conclusion)
+                return false;
+                       
             int i = 0;
-            foreach (string term in Antecedents)
+            foreach (string term in this.Premises)
             {
-                if (term != rule.Antecedents[i])
+                if (term != rule.Premises[i])
                     return false;
 
                 i++;
@@ -58,18 +58,18 @@ namespace CSC533
             string result = "";
             if (IsSymbol())
             {
-                result = Consequent;
+                result = Conclusion;
             }
             else
             {
-                foreach (string term in Antecedents)
+                foreach (string term in Premises)
                 {
                     result += term;
-                    if (term != Antecedents.Last())
+                    if (term != Premises.Last())
                         result += " ˄ ";
                 }
 
-                result += " => " + Consequent;
+                result += " => " + Conclusion;
             }
             
             return result;
