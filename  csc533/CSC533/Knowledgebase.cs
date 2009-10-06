@@ -86,10 +86,19 @@ namespace CSC533
                         inferred.Add(s, false);
 
                 if (rule.IsSymbol())
+<<<<<<< .mine
+                {
+=======
                 {
                     MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
+>>>>>>> .r21
                     agenda.Push(rule.Conclusion);
+<<<<<<< .mine
+                    MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
                 }
+=======
+                }
+>>>>>>> .r21
                 else
                     count.Add(rule, rule.Premises.Count());
             }
@@ -158,13 +167,13 @@ namespace CSC533
                     visitedRules.Add(rule, false);
                 }
 
-                //If the rule is not a symbol and hasn't been visited, recursively evaluate it
+                //If the rule is not a symbol and hasn't been visited, recursively evaluate its premises
                 bool result = true;
-
-                //Evaluate each term in the premises of this rule and accumulate the result
                 foreach (string term in rule.Premises)
                 {
-                    result = result && check(term);
+                    result = check(term);
+                    if (!result)
+                        break;
                 }
 
                 //If all terms are true, we can return true; otherwise, go to the next rule.
