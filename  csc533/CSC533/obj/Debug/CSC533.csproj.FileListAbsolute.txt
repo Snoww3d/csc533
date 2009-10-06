@@ -25,3 +25,12 @@ C:\Documents and Settings\Chris Townsend\Desktop\csc533-1\CSC533\obj\Debug\CSC53
 C:\Documents and Settings\Chris Townsend\Desktop\csc533-1\CSC533\obj\Debug\CSC533.MainForm.resources
 C:\Documents and Settings\Chris Townsend\Desktop\csc533-1\CSC533\obj\Debug\CSC533.Properties.Resources.resources
 C:\Documents and Settings\Chris Townsend\Desktop\csc533-1\CSC533\obj\Debug\CSC533.csproj.GenerateResource.Cache
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\obj\Debug\CSC533.exe
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\obj\Debug\CSC533.pdb
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\bin\Debug\CSC533.exe
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\bin\Debug\CSC533.pdb
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\obj\Debug\CSC533.About.resources
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\obj\Debug\CSC533.MainForm.resources
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\obj\Debug\CSC533.Properties.Resources.resources
+C:\Users\Shanon\Documents\Visual Studio 2008\Projects\CSC 533\CSC533\obj\Debug\CSC533.csproj.GenerateResource.Cache

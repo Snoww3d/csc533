@@ -14,6 +14,7 @@ namespace CSC533
     {
         private List<Rule> rules;                       //main list of rules
         //public List<Rule> Rules { get { return rules; } }
+        private Dictionary<Rule, bool> inferredRules;   //list of rules proved true -- used during forward chaining
         private Dictionary<Rule, bool> visitedRules;    //list of rules visited--used during chaining
 
 
@@ -53,9 +54,11 @@ namespace CSC533
         //Use forward chaining to determine the truth of a symbol
         public bool AskForward(string symbol)
         {
-            throw new NotImplementedException();
-
+            inferredRules = new Dictionary<Rule, bool>();
+            return entails(symbol);
         }
+
+       
 
 
         //Use backward chaining to determine the truth of a symbol
@@ -65,6 +68,35 @@ namespace CSC533
             return check(conclusion);
         }
 
+        //Forward Chaining Algorithm
+        private bool entails(string symbol)
+        {
+
+            Dictionary<Rule, int> count;      // a table indexed by clause, initially the number of permises
+            Stack<string> agenda;          // a list of symbols, initially the symbols known to be true in KB
+            agenda = new Stack<string>();
+
+            foreach(Rule rule in rules)
+            {
+                if (rule.IsSymbol())
+                {
+                    agenda.Push(rule.Consequent);           
+                }
+            }
+
+
+            while (agenda.Count != 0)
+            {
+                string P = agenda.Pop();
+                if (P == symbol) return true;
+
+            }
+
+
+            return false;
+        }
+
+    
 
         //Backward chaining algorithm
         private bool check(string conclusion)
