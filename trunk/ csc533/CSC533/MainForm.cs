@@ -47,16 +47,11 @@ namespace CSC533
 
         private void fowardChainDemoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxMain.Clear();
-
-            textBoxMain.Text = "Forward Chaining Demo";
+          
         }
 
         private void backwardChainingDemoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxMain.Clear();
-
-            textBoxMain.Text = "Backwards Chaining Demo";
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -105,6 +100,8 @@ namespace CSC533
         //Evaluate query by forward chaining
         private void forwardButton_Click(object sender, EventArgs e)
         {
+            outputLabel.Text = "";
+            
             string query = queryTextBox.Text.Trim();
 
             if (!String.IsNullOrEmpty(query))
@@ -125,6 +122,8 @@ namespace CSC533
         //Evaluate query by backward chaining
         private void backwardButton_Click(object sender, EventArgs e)
         {
+            outputLabel.Text = "";
+            
             string query = queryTextBox.Text.Trim();
 
             if (!String.IsNullOrEmpty(query))

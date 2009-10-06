@@ -75,6 +75,8 @@ namespace CSC533
             //or we run out of rules.
             foreach (Rule rule in rulesWithConclusion)
             {
+                MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
+                
                 //Check if rule has already been visited
                 if (visitedRules.ContainsKey(rule))
                 {
