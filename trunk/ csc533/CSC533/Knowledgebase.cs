@@ -71,17 +71,25 @@ namespace CSC533
         //Forward Chaining Algorithm
         private bool entails(string symbol)
         {
+                
+            Dictionary<Rule, int> count;        // a table indexed by clause, initially the number of permises
+            Dictionary<string, bool> inferred;  // a table indexed by symbol, each entry intially false;
+            Stack<string> agenda;               // a list of symbols, initially the symbols known to be true in KB
 
-            Dictionary<Rule, int> count;      // a table indexed by clause, initially the number of permises
-            Stack<string> agenda;          // a list of symbols, initially the symbols known to be true in KB
+            count = new Dictionary<Rule,int>();
+            inferred = new Dictionary<string, bool>();
             agenda = new Stack<string>();
 
             foreach(Rule rule in rules)
             {
+                foreach (string s in rule.Antecedents)
+                    if (!inferred.ContainsKey(s))
+                        inferred.Add(s, false);
+                
                 if (rule.IsSymbol())
-                {
-                    agenda.Push(rule.Consequent);           
-                }
+                    agenda.Push(rule.Consequent);
+                else
+                    count.Add(rule, rule.Antecedents.Count());
             }
 
 
@@ -89,9 +97,22 @@ namespace CSC533
             {
                 string P = agenda.Pop();
                 if (P == symbol) return true;
+                
+                if(inferred.ContainsKey(P) && !inferred[P])
+                {
+                    inferred[P] = true;
+                    foreach (Rule rule in rules)
+                    {
+                        if (rule.Antecedents.Contains(P))
+                        {
+                            count[rule]--;
+                            if (count[rule] == 0)
+                                agenda.Push(rule.Consequent);
+                        }
+                    }
+                }
 
             }
-
 
             return false;
         }
