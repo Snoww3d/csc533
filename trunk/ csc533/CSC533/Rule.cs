@@ -66,7 +66,7 @@ namespace CSC533
                 {
                     result += term;
                     if (term != Premises.Last())
-                        result += " ˄ ";
+                        result += " ^ ";
                 }
 
                 result += " => " + Conclusion;

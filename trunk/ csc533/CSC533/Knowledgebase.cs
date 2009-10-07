@@ -12,10 +12,11 @@ namespace CSC533
     //Can query symbols with forward or backward chaining
     public class Knowledgebase
     {
-        private List<Rule> rules;                       //main list of rules
+        private List<Rule> rules;                           //main list of rules
         //public List<Rule> Rules { get { return rules; } }
-        private Dictionary<Rule, bool> inferredRules;   //list of rules proved true -- used during forward chaining
-        private Dictionary<Rule, bool> visitedRules;    //list of rules visited -- used during backward chaining
+        private Dictionary<Rule, bool> inferredRules;       //list of rules proved true -- used during forward chaining
+        private Dictionary<string, bool> knownSymbols;      //list of symbols proven true or false -- used during backward chaining
+        private List<Rule> visitedRules;                    //list of rules visited -- used during backward chaining
         private string log;
         public string Log { get { return log; } }
 
@@ -64,7 +65,8 @@ namespace CSC533
         //Use backward chaining to determine the truth of a symbol
         public bool AskBackward(string symbol)
         {
-            visitedRules = new Dictionary<Rule, bool>();
+            visitedRules = new List<Rule>();
+            knownSymbols = new Dictionary<string, bool>();
             log = "";
             return check(symbol);
         }
@@ -130,48 +132,54 @@ namespace CSC533
         //Backward chaining algorithm
         private bool check(string conclusion)
         {
-            List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
-            bool cycle = false;
             log += "Checking symbol " + conclusion + ".\r\n";
+
+            //Avoid unnecessary work by checking if the symbol is already known true or false            
+            if (knownSymbols.ContainsKey(conclusion))
+            {
+                if (knownSymbols[conclusion])
+                {
+                    log += conclusion + " has been proven true.\r\n";
+                    return true;
+                }
+                else
+                {
+                    log += conclusion + " has been proven false.\r\n";
+                    return false;
+                }
+            }
 
             //Evaluate all rules with this conclusion until either a rule is true
             //or we run out of rules.
+            List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
+            bool cycle = false;
+            
             foreach (Rule rule in rulesWithConclusion)
             {
                 log += "Found rule " + rule.ToString() + ".\r\n";
 
-                //If the rule is a symbol, it is a known true. This is one base case.
+                //If the rule is a symbol, it is a known true.
                 if (rule.IsSymbol())
                 {
-                    visitedRules[rule] = true;
+                    knownSymbols[conclusion] = true;
                     log += conclusion + " is true.\r\n";
                     return true;
                 }
 
                 //Check if rule has already been visited
-                if (visitedRules.ContainsKey(rule))
+                if (visitedRules.Contains(rule))
                 {
-                    //Already known to be true
-                    if (visitedRules[rule])
-                    {
-                        log += conclusion + " has been proven true.\r\n";
-                        return true;
-                    }
-
-                    //Cycle in graph; skip this rule to avoid infinite loop
-                    else
-                    {
-                        log += rule.ToString() + " is known to be false or depends on its own conclusion.\r\n";
-                        cycle = true;
-                        continue;
-                    }
+                    log += "Rule " + rule.ToString() + " depends on its own conclusion...skipping rule.\r\n";
+                    cycle = true;
+                    continue;
                 }
                 else
                 {
-                    visitedRules.Add(rule, false);
+                    visitedRules.Add(rule);
                 }
 
-                //If the rule is not a symbol and hasn't been visited, recursively evaluate its premises
+                //If the rule is not known true or false and hasn't been visited, 
+                //recursively evaluate its premises
                 bool result = true;
                 foreach (string term in rule.Premises)
                 {
@@ -186,18 +194,21 @@ namespace CSC533
                 //If all terms are true, we can return true; otherwise, go to the next rule.
                 if (result)
                 {
-                    visitedRules[rule] = true;
+                    knownSymbols.Add(conclusion, true);
                     log += conclusion + " is true by rule " + rule.ToString() + ".\r\n";
                     return true;
                 }
             }
 
-            //We have run out of rules to evaluate. The conclusion is false - the other base case.
+            //We have run out of rules to evaluate. The conclusion is false.
             log += "No further rules conclude " + conclusion;
             if (cycle)
                 log += ".\r\n";
             else
+            {                
+                knownSymbols.Add(conclusion, false);
                 log += ". " + conclusion + " is false.\r\n";
+            }
 
             return false;
         }
