@@ -47,7 +47,8 @@
             this.ruleListBox = new System.Windows.Forms.ListBox();
             this.openButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.outputLabel = new System.Windows.Forms.Label();
+            this.outputTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(631, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(641, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -220,20 +221,32 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // outputLabel
+            // outputTextBox
             // 
-            this.outputLabel.AutoSize = true;
-            this.outputLabel.Location = new System.Drawing.Point(406, 33);
-            this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(0, 13);
-            this.outputLabel.TabIndex = 15;
+            this.outputTextBox.Location = new System.Drawing.Point(392, 60);
+            this.outputTextBox.Multiline = true;
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.ReadOnly = true;
+            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.outputTextBox.Size = new System.Drawing.Size(237, 199);
+            this.outputTextBox.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(389, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Output:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 291);
-            this.Controls.Add(this.outputLabel);
+            this.ClientSize = new System.Drawing.Size(641, 296);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openButton);
             this.Controls.Add(this.ruleListBox);
@@ -279,7 +292,8 @@
         private System.Windows.Forms.ListBox ruleListBox;
         private System.Windows.Forms.Button openButton;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.TextBox outputTextBox;
+        private System.Windows.Forms.Label label3;
     }
 }
 
