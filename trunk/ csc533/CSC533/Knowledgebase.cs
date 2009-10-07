@@ -90,7 +90,7 @@ namespace CSC533
 
                 if (rule.IsSymbol())
                 {
-                    MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
+                    log += rule + "\r\n";
                     agenda.Push(rule.Conclusion);
                 }
                 else
@@ -114,7 +114,7 @@ namespace CSC533
                             if (count[rule] == 0)
                             {
                                 agenda.Push(rule.Conclusion);
-                                MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
+                                log += rule + "\r\n";
                             }
                         }
                     }
@@ -131,19 +131,20 @@ namespace CSC533
         private bool check(string conclusion)
         {
             List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
-            log += "Checking symbol " + conclusion + "\r\n";
+            bool cycle = false;
+            log += "Checking symbol " + conclusion + ".\r\n";
 
             //Evaluate all rules with this conclusion until either a rule is true
             //or we run out of rules.
             foreach (Rule rule in rulesWithConclusion)
             {
-                log += "Found rule " + rule.ToString() + "\r\n";
+                log += "Found rule " + rule.ToString() + ".\r\n";
 
                 //If the rule is a symbol, it is a known true. This is one base case.
                 if (rule.IsSymbol())
                 {
                     visitedRules[rule] = true;
-                    log += conclusion + " is true\r\n";
+                    log += conclusion + " is true.\r\n";
                     return true;
                 }
 
@@ -153,14 +154,15 @@ namespace CSC533
                     //Already known to be true
                     if (visitedRules[rule])
                     {
-                        log += conclusion + " has been proven true\r\n";
+                        log += conclusion + " has been proven true.\r\n";
                         return true;
                     }
 
                     //Cycle in graph; skip this rule to avoid infinite loop
                     else
                     {
-                        log += "A premise in " + rule.ToString() + " depends on the result of " + conclusion + "...skipping rule\r\n";
+                        log += rule.ToString() + " is known to be false or depends on its own conclusion.\r\n";
+                        cycle = true;
                         continue;
                     }
                 }
@@ -175,20 +177,28 @@ namespace CSC533
                 {
                     result = check(term);
                     if (!result)
+                    {
+                        log += "Rule " + rule.ToString() + " is false.\r\n";
                         break;
+                    }
                 }
 
                 //If all terms are true, we can return true; otherwise, go to the next rule.
                 if (result)
                 {
                     visitedRules[rule] = true;
-                    log += conclusion + " is true by rule " + rule.ToString() + "\r\n";
+                    log += conclusion + " is true by rule " + rule.ToString() + ".\r\n";
                     return true;
                 }
             }
 
             //We have run out of rules to evaluate. The conclusion is false - the other base case.
-            //log += "No further rules conclude " + conclusion + ". " + conclusion + " is false\r\n";
+            log += "No further rules conclude " + conclusion;
+            if (cycle)
+                log += ".\r\n";
+            else
+                log += ". " + conclusion + " is false.\r\n";
+
             return false;
         }
 
