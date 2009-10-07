@@ -92,7 +92,8 @@ namespace CSC533
 
                 if (rule.IsSymbol())
                 {
-                    log += rule + "\r\n";
+                    log += "Add "+ rule + " to the knownledge base\r\n";
+
                     agenda.Push(rule.Conclusion);
                 }
                 else
@@ -103,6 +104,8 @@ namespace CSC533
             while (agenda.Count != 0)
             {
                 string P = agenda.Pop();
+                log += "Checking all rules that contain "+P + "\r\n";
+
                 if (P == symbol) return true;
 
                 if (inferred.ContainsKey(P) && !inferred[P])
