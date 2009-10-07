@@ -100,7 +100,7 @@ namespace CSC533
         //Evaluate query by forward chaining
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            outputLabel.Text = "";
+            outputTextBox.Text = "";
             
             string query = queryTextBox.Text.Trim();
 
@@ -117,9 +117,7 @@ namespace CSC533
 
         //Evaluate query by backward chaining
         private void backwardButton_Click(object sender, EventArgs e)
-        {
-            outputLabel.Text = "";
-            
+        {            
             string query = queryTextBox.Text.Trim();
 
             if (!String.IsNullOrEmpty(query))
@@ -130,6 +128,7 @@ namespace CSC533
                     resultLabel.Text = "False";
 
                 resultLabel.Visible = true;
+                outputTextBox.Text = knowledgebase.Log;
             }
         }
 

@@ -16,7 +16,8 @@ namespace CSC533
         //public List<Rule> Rules { get { return rules; } }
         private Dictionary<Rule, bool> inferredRules;   //list of rules proved true -- used during forward chaining
         private Dictionary<Rule, bool> visitedRules;    //list of rules visited -- used during backward chaining
-
+        private string log;
+        public string Log { get { return log; } }
 
         //Constructor
         public Knowledgebase()
@@ -55,6 +56,7 @@ namespace CSC533
         public bool AskForward(string symbol)
         {
             inferredRules = new Dictionary<Rule, bool>();
+            log = "";
             return entails(symbol);
         }
 
@@ -63,6 +65,7 @@ namespace CSC533
         public bool AskBackward(string symbol)
         {
             visitedRules = new Dictionary<Rule, bool>();
+            log = "";
             return check(symbol);
         }
 
@@ -128,17 +131,19 @@ namespace CSC533
         private bool check(string conclusion)
         {
             List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
+            log += "Checking symbol " + conclusion + "\r\n";
 
             //Evaluate all rules with this conclusion until either a rule is true
             //or we run out of rules.
             foreach (Rule rule in rulesWithConclusion)
             {
-                MainForm.ActiveForm.Controls["outputLabel"].Text += rule + "\n";
+                log += "Found rule " + rule.ToString() + "\r\n";
 
                 //If the rule is a symbol, it is a known true. This is one base case.
                 if (rule.IsSymbol())
                 {
                     visitedRules[rule] = true;
+                    log += conclusion + " is true\r\n";
                     return true;
                 }
 
@@ -147,11 +152,17 @@ namespace CSC533
                 {
                     //Already known to be true
                     if (visitedRules[rule])
+                    {
+                        log += conclusion + " has been proven true\r\n";
                         return true;
+                    }
 
                     //Cycle in graph; skip this rule to avoid infinite loop
                     else
+                    {
+                        log += "A premise in " + rule.ToString() + " depends on the result of " + conclusion + "...skipping rule\r\n";
                         continue;
+                    }
                 }
                 else
                 {
@@ -171,11 +182,13 @@ namespace CSC533
                 if (result)
                 {
                     visitedRules[rule] = true;
+                    log += conclusion + " is true by rule " + rule.ToString() + "\r\n";
                     return true;
                 }
             }
 
             //We have run out of rules to evaluate. The conclusion is false - the other base case.
+            //log += "No further rules conclude " + conclusion + ". " + conclusion + " is false\r\n";
             return false;
         }
 
@@ -204,7 +217,7 @@ namespace CSC533
             foreach (Rule rule in rules)
             {
                 result += rule.ToString();
-                result += "\n\r";
+                result += "\r\n";
             }
 
             return result;
