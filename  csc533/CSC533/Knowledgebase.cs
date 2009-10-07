@@ -194,7 +194,9 @@ namespace CSC533
                 //If all terms are true, we can return true; otherwise, go to the next rule.
                 if (result)
                 {
-                    knownSymbols.Add(conclusion, true);
+                    if (!knownSymbols.ContainsKey(conclusion))
+                        knownSymbols.Add(conclusion, true);
+                    
                     log += conclusion + " is true by rule " + rule.ToString() + ".\r\n";
                     return true;
                 }
@@ -205,8 +207,9 @@ namespace CSC533
             if (cycle)
                 log += ".\r\n";
             else
-            {                
-                knownSymbols.Add(conclusion, false);
+            {
+                if (!knownSymbols.ContainsKey(conclusion))
+                    knownSymbols.Add(conclusion, false);
                 log += ". " + conclusion + " is false.\r\n";
             }
 
