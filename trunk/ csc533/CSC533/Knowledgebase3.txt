@@ -1,7 +1,24 @@
-﻿P => Q
-L ˄ M => P
-B ˄ L => M
-A ˄ P => L
-A ˄ B => L
-A
-B
+R => X
+M ^ N => R
+R => Q
+N ^ O ^ P => Q
+C ^ H ^ P ^ W => S
+X ^ Y ^ Z => M
+N => Z
+A ^ O => N
+P => O
+A => P
+C ^ D => W
+X => Y
+E ^ F ^ G ^ H => X
+F ^ G ^ L => Y
+G => Z
+F ^ H ^ Z => A
+A ^ G => B
+L => B
+B => C
+I ^ J ^ K => D
+E
+F
+G
+H
