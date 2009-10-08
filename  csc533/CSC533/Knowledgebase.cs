@@ -6,7 +6,7 @@
  * 
  * Knowledgebase.cs
  * 
- */ 
+ */
 
 using System;
 using System.Collections.Generic;
@@ -101,7 +101,7 @@ namespace CSC533
 
                 if (rule.IsSymbol())
                 {
-                   
+
                     log += "Add " + rule + " to the knowledge base\r\n";
                     if (rule.Conclusion == symbol)
                     {
@@ -133,12 +133,12 @@ namespace CSC533
                     {
                         if (rule.Premises.Contains(P))
                         {
-                            log += "The count of "+ rule + " is reduced\r\n";
+                            log += "The count of " + rule + " is reduced\r\n";
                             count[rule]--;
                             if (count[rule] == 0)
                             {
                                 agenda.Push(rule.Conclusion);
-                                 log += "Add " + rule.Conclusion + " to the knowledge base\r\n";
+                                log += "Add " + rule.Conclusion + " to the knowledge base\r\n";
                             }
                         }
                     }
@@ -172,7 +172,7 @@ namespace CSC533
             //Evaluate all rules with this conclusion until either a rule is true
             //or we run out of rules.
             List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
-            bool cycle = false;
+            bool cycle = true;
 
             foreach (Rule rule in rulesWithConclusion)
             {
@@ -229,19 +229,11 @@ namespace CSC533
 
             //There are no remaining rules to evaluate. The conclusion is false.
             if (rulesWithConclusion.Count == 0)
-                log += "No rules conclude " + conclusion;
+                log += "No rules conclude " + conclusion + ".\r\n";
             else
-                log += "No further rules conclude " + conclusion;            
+                log += "No further rules conclude " + conclusion + ".\r\n";
 
-            if (cycle)
-                log += ".\r\n";
-            else
-            {
-                knownSymbols.Add(conclusion, false);
-                unknownSymbols.Remove(conclusion);
-                log += ". " + conclusion + " is false.\r\n";
-            }
-
+            unknownSymbols.Remove(conclusion);
             return false;
         }
 
