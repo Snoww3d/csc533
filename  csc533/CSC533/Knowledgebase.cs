@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+ * CSC 533 Artificial Intelligence
+ * Project 1 - Forward and Backward Chaining
+ * Authors: Shanon Clemmons and Chris Townsend
+ * Date: 10/8/09
+ * 
+ * Knowledgebase.cs
+ * 
+ */ 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +23,9 @@ namespace CSC533
     public class Knowledgebase
     {
         private List<Rule> rules;                           //main list of rules
-        //public List<Rule> Rules { get { return rules; } }
         private Dictionary<Rule, bool> inferredRules;       //list of rules proved true -- used during forward chaining
         private Dictionary<string, bool> knownSymbols;      //list of symbols proven true or false -- used during backward chaining
-        private List<string> unknownSymbols;
+        private List<string> unknownSymbols;                //list of symbols under evaluation -- used during backward chaining
         private string log;
         public string Log { get { return log; } }
 
@@ -131,7 +140,6 @@ namespace CSC533
         }
 
 
-
         //Backward chaining algorithm
         private bool check(string conclusion)
         {
@@ -192,7 +200,6 @@ namespace CSC533
                 bool result = true;
                 foreach (string term in rule.Premises)
                 {
-                    //Perform recursive check on the term. If false, short-circuit out of loop
                     result = check(term);
                     if (!result)
                     {
@@ -211,7 +218,7 @@ namespace CSC533
                 }
             }
 
-            //We have run out of rules to evaluate. The conclusion is false.
+            //There are no remaining rules to evaluate. The conclusion is false.
             if (rulesWithConclusion.Count == 0)
                 log += "No rules conclude " + conclusion;
             else
