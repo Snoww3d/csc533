@@ -138,12 +138,11 @@ namespace CSC533
                             if (count[rule] == 0)
                             {
                                 agenda.Push(rule.Conclusion);
-                                 log += "Add " + rule.Conclusion + " to the knownledge base\r\n";
+                                 log += "Add " + rule.Conclusion + " to the knowledge base\r\n";
                             }
                         }
                     }
                 }
-
             }
 
             return false;
