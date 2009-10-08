@@ -77,6 +77,7 @@ namespace CSC533
                         entryTextBox.Clear();
                         resultLabel.Visible = false;
                         knowledgebaseChanged = true;
+                        outputTextBox.Text = "";
                     }
                     else
                         MessageBox.Show("That rule already exists.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -94,6 +95,7 @@ namespace CSC533
                 ruleListBox.Items.RemoveAt(ruleListBox.SelectedIndex);
                 resultLabel.Visible = false;
                 knowledgebaseChanged = true;
+                outputTextBox.Text = "";
             }
         }
 
