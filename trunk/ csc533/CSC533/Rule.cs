@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+ * CSC 533 Artificial Intelligence
+ * Project 1 - Forward and Backward Chaining
+ * Authors: Shanon Clemmons and Chris Townsend
+ * Date: 10/8/09
+ * 
+ * Rule.cs
+ * 
+ */ 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
