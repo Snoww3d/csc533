@@ -107,10 +107,16 @@ namespace CSC533
             if (!String.IsNullOrEmpty(query))
             {
                 if (knowledgebase.AskForward(query.ToUpper()))
+                {
                     resultLabel.Text = "True";
+                    resultLabel.ForeColor = Color.Green;
+                }
                 else
+                {
                     resultLabel.Text = "False";
-                
+                    resultLabel.ForeColor = Color.Red;
+                }
+
                 resultLabel.Visible = true;
                 outputTextBox.Text = knowledgebase.Log;
             }
@@ -124,9 +130,15 @@ namespace CSC533
             if (!String.IsNullOrEmpty(query))
             {
                 if (knowledgebase.AskBackward(query.ToUpper()))
+                {
                     resultLabel.Text = "True";
+                    resultLabel.ForeColor = Color.Green;
+                }
                 else
+                {
                     resultLabel.Text = "False";
+                    resultLabel.ForeColor = Color.Red;
+                }
 
                 resultLabel.Visible = true;
                 outputTextBox.Text = knowledgebase.Log;

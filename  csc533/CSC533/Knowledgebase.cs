@@ -92,7 +92,7 @@ namespace CSC533
 
                 if (rule.IsSymbol())
                 {
-                    log += "Add "+ rule + " to the knownledge base\r\n";
+                    log += "Add " + rule + " to the knownledge base\r\n";
 
                     agenda.Push(rule.Conclusion);
                 }
@@ -104,7 +104,7 @@ namespace CSC533
             while (agenda.Count != 0)
             {
                 string P = agenda.Pop();
-                log += "Checking all rules that contain "+P + "\r\n";
+                log += "Checking all rules that contain " + P + "\r\n";
 
                 if (P == symbol) return true;
 
@@ -156,7 +156,7 @@ namespace CSC533
             //or we run out of rules.
             List<Rule> rulesWithConclusion = findRulesWithConclusion(conclusion);
             bool cycle = false;
-            
+
             foreach (Rule rule in rulesWithConclusion)
             {
                 log += "Found rule " + rule.ToString() + ".\r\n";
@@ -165,7 +165,6 @@ namespace CSC533
                 if (rule.IsSymbol())
                 {
                     knownSymbols[conclusion] = true;
-                    unknownSymbols.Remove(conclusion);
                     log += conclusion + " is true.\r\n";
                     return true;
                 }
@@ -189,9 +188,8 @@ namespace CSC533
                 if (cycle)
                     continue;
 
-                //If the rule is not known true or false and hasn't been visited, 
-                //recursively evaluate its premises
-                bool result = true;               
+                //If the rule is not known true or false, recursively evaluate its premises
+                bool result = true;
                 foreach (string term in rule.Premises)
                 {
                     //Perform recursive check on the term. If false, short-circuit out of loop
@@ -206,27 +204,25 @@ namespace CSC533
                 //If all terms are true, we can return true; otherwise, go to the next rule.
                 if (result)
                 {
-                    if (!knownSymbols.ContainsKey(conclusion))
-                    {
-                        knownSymbols.Add(conclusion, true);
-                        unknownSymbols.Remove(conclusion);
-                    }
+                    knownSymbols.Add(conclusion, true);
+                    unknownSymbols.Remove(conclusion);
                     log += conclusion + " is true by rule " + rule.ToString() + ".\r\n";
                     return true;
                 }
             }
 
             //We have run out of rules to evaluate. The conclusion is false.
-            log += "No further rules conclude " + conclusion;
+            if (rulesWithConclusion.Count == 0)
+                log += "No rules conclude " + conclusion;
+            else
+                log += "No further rules conclude " + conclusion;            
+
             if (cycle)
                 log += ".\r\n";
             else
             {
-                if (!knownSymbols.ContainsKey(conclusion))
-                {
-                    knownSymbols.Add(conclusion, false);
-                    unknownSymbols.Remove(conclusion);
-                }
+                knownSymbols.Add(conclusion, false);
+                unknownSymbols.Remove(conclusion);
                 log += ". " + conclusion + " is false.\r\n";
             }
 
