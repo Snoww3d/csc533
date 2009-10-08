@@ -102,7 +102,7 @@ namespace CSC533
                 if (rule.IsSymbol())
                 {
                    
-                    log += "Add " + rule + " to the knownledge base\r\n";
+                    log += "Add " + rule + " to the knowledge base\r\n";
                     if (rule.Conclusion == symbol)
                     {
                         log += "Found " + symbol + " to be true\r\n";
@@ -252,12 +252,8 @@ namespace CSC533
             List<Rule> result = new List<Rule>();
 
             foreach (Rule rule in rules)
-            {
                 if (rule.Conclusion == symbol)
-                {
                     result.Add(rule);
-                }
-            }
 
             return result;
         }
