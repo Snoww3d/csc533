@@ -16,7 +16,6 @@ namespace CSC533
         //public List<Rule> Rules { get { return rules; } }
         private Dictionary<Rule, bool> inferredRules;       //list of rules proved true -- used during forward chaining
         private Dictionary<string, bool> knownSymbols;      //list of symbols proven true or false -- used during backward chaining
-        private List<Rule> visitedRules;                    //list of rules visited -- used during backward chaining
         private List<string> unknownSymbols;
         private string log;
         public string Log { get { return log; } }
@@ -66,7 +65,6 @@ namespace CSC533
         //Use backward chaining to determine the truth of a symbol
         public bool AskBackward(string symbol)
         {
-            visitedRules = new List<Rule>();
             knownSymbols = new Dictionary<string, bool>();
             unknownSymbols = new List<string>();
             log = "";
@@ -78,7 +76,7 @@ namespace CSC533
         private bool entails(string symbol)
         {
 
-            Dictionary<Rule, int> count;        // a table indexed by clause, initially the number of permises
+            Dictionary<Rule, int> count;        // a table indexed by clause, initially the number of premises
             Dictionary<string, bool> inferred;  // a table indexed by symbol, each entry intially false;
             Stack<string> agenda;               // a list of symbols, initially the symbols known to be true in KB
 
