@@ -1,10 +1,7 @@
-﻿P => Q
+P => Q
 L ˄ M => P
-B ˄ C => M
 B ˄ L => M
-A ˄ P ^ C => L
 A ˄ P => L
 A ˄ B => L
-A ^ D => C
 A
 B
