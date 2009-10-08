@@ -24,7 +24,7 @@ namespace CSC533
     {
         private List<Rule> rules;                           //main list of rules
         private Dictionary<Rule, bool> inferredRules;       //list of rules proved true -- used during forward chaining
-        private Dictionary<string, bool> knownSymbols;      //list of symbols proven true or false -- used during backward chaining
+        private List<string> knownTrueSymbols;              //list of symbols proven true -- used during backward chaining
         private List<string> unknownSymbols;                //list of symbols under evaluation -- used during backward chaining
         private string log;
         public string Log { get { return log; } }
@@ -74,7 +74,7 @@ namespace CSC533
         //Use backward chaining to determine the truth of a symbol
         public bool AskBackward(string symbol)
         {
-            knownSymbols = new Dictionary<string, bool>();
+            knownTrueSymbols = new List<string>();
             unknownSymbols = new List<string>();
             log = "";
             return check(symbol);
@@ -154,19 +154,11 @@ namespace CSC533
         {
             log += "Checking symbol " + conclusion + ".\r\n";
 
-            //Avoid unnecessary work by checking if the symbol is already known true or false            
-            if (knownSymbols.ContainsKey(conclusion))
+            //Avoid unnecessary work by checking if the symbol is already known true           
+            if (knownTrueSymbols.Contains(conclusion))
             {
-                if (knownSymbols[conclusion])
-                {
-                    log += conclusion + " has been proven true.\r\n";
-                    return true;
-                }
-                else
-                {
-                    log += conclusion + " has been proven false.\r\n";
-                    return false;
-                }
+                log += conclusion + " has been proven true.\r\n";
+                return true;
             }
 
             //Evaluate all rules with this conclusion until either a rule is true
@@ -181,7 +173,7 @@ namespace CSC533
                 //If the rule is a symbol, it is a known true.
                 if (rule.IsSymbol())
                 {
-                    knownSymbols[conclusion] = true;
+                    knownTrueSymbols.Add(conclusion);
                     log += conclusion + " is true.\r\n";
                     return true;
                 }
@@ -220,7 +212,7 @@ namespace CSC533
                 //If all terms are true, we can return true; otherwise, go to the next rule.
                 if (result)
                 {
-                    knownSymbols.Add(conclusion, true);
+                    knownTrueSymbols.Add(conclusion);
                     unknownSymbols.Remove(conclusion);
                     log += conclusion + " is true by rule " + rule.ToString() + ".\r\n";
                     return true;
