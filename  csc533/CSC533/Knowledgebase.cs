@@ -101,8 +101,13 @@ namespace CSC533
 
                 if (rule.IsSymbol())
                 {
+                   
                     log += "Add " + rule + " to the knownledge base\r\n";
-
+                    if (rule.Conclusion == symbol)
+                    {
+                        log += "Found " + symbol + " to be true\r\n";
+                        return true;
+                    }
                     agenda.Push(rule.Conclusion);
                 }
                 else
@@ -115,7 +120,11 @@ namespace CSC533
                 string P = agenda.Pop();
                 log += "Checking all rules that contain " + P + "\r\n";
 
-                if (P == symbol) return true;
+                if (P == symbol)
+                {
+                    log += "Found " + symbol + " to be true\r\n";
+                    return true;
+                }
 
                 if (inferred.ContainsKey(P) && !inferred[P])
                 {
@@ -124,11 +133,12 @@ namespace CSC533
                     {
                         if (rule.Premises.Contains(P))
                         {
+                            log += "The count of "+ rule + " is reduced\r\n";
                             count[rule]--;
                             if (count[rule] == 0)
                             {
                                 agenda.Push(rule.Conclusion);
-                                log += rule + "\r\n";
+                                 log += "Add " + rule.Conclusion + " to the knownledge base\r\n";
                             }
                         }
                     }
