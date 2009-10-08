@@ -17,6 +17,7 @@ namespace CSC533
         private Dictionary<Rule, bool> inferredRules;       //list of rules proved true -- used during forward chaining
         private Dictionary<string, bool> knownSymbols;      //list of symbols proven true or false -- used during backward chaining
         private List<Rule> visitedRules;                    //list of rules visited -- used during backward chaining
+        private List<string> unknownSymbols;
         private string log;
         public string Log { get { return log; } }
 
@@ -67,6 +68,7 @@ namespace CSC533
         {
             visitedRules = new List<Rule>();
             knownSymbols = new Dictionary<string, bool>();
+            unknownSymbols = new List<string>();
             log = "";
             return check(symbol);
         }
@@ -165,27 +167,36 @@ namespace CSC533
                 if (rule.IsSymbol())
                 {
                     knownSymbols[conclusion] = true;
+                    unknownSymbols.Remove(conclusion);
                     log += conclusion + " is true.\r\n";
                     return true;
                 }
 
-                //Check if rule has already been visited
-                if (visitedRules.Contains(rule))
+                //Add this conclusion to the list of symbols currently being evaluated
+                if (!unknownSymbols.Contains(conclusion))
+                    unknownSymbols.Add(conclusion);
+
+                //If a premise is still in the process of being evaluated, there is a cycle in the graph--skip the rule
+                cycle = false;
+                foreach (string term in rule.Premises)
                 {
-                    log += "Rule " + rule.ToString() + " depends on its own conclusion...skipping rule.\r\n";
-                    cycle = true;
+                    if (unknownSymbols.Contains(term))
+                    {
+                        log += "Rule " + rule.ToString() + " depends on its own conclusion...skipping rule.\r\n";
+                        cycle = true;
+                        break;
+                    }
+                }
+
+                if (cycle)
                     continue;
-                }
-                else
-                {
-                    visitedRules.Add(rule);
-                }
 
                 //If the rule is not known true or false and hasn't been visited, 
                 //recursively evaluate its premises
-                bool result = true;
+                bool result = true;               
                 foreach (string term in rule.Premises)
                 {
+                    //Perform recursive check on the term. If false, short-circuit out of loop
                     result = check(term);
                     if (!result)
                     {
@@ -198,8 +209,10 @@ namespace CSC533
                 if (result)
                 {
                     if (!knownSymbols.ContainsKey(conclusion))
+                    {
                         knownSymbols.Add(conclusion, true);
-                    
+                        unknownSymbols.Remove(conclusion);
+                    }
                     log += conclusion + " is true by rule " + rule.ToString() + ".\r\n";
                     return true;
                 }
@@ -212,7 +225,10 @@ namespace CSC533
             else
             {
                 if (!knownSymbols.ContainsKey(conclusion))
+                {
                     knownSymbols.Add(conclusion, false);
+                    unknownSymbols.Remove(conclusion);
+                }
                 log += ". " + conclusion + " is false.\r\n";
             }
 
