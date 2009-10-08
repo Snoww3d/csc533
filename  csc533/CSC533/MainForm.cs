@@ -247,6 +247,7 @@ namespace CSC533
                 entryTextBox.Clear();
                 resultLabel.Visible = false;
                 knowledgebaseChanged = false;
+                outputTextBox.Text = "";
             }
 
         }
