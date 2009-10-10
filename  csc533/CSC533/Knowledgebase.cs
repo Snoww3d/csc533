@@ -77,7 +77,13 @@ namespace CSC533
             knownTrueSymbols = new List<string>();
             unknownSymbols = new List<string>();
             log = "";
-            return check(symbol);
+            if (check(symbol))
+                return true;
+            else
+            {
+                log += symbol + " is false.\r\n";
+                return false;
+            }
         }
 
 
