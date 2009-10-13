@@ -150,7 +150,7 @@ namespace CSC533
                     }
                 }
             }
-
+            log += symbol + " is false.\r\n";
             return false;
         }
 
