@@ -124,11 +124,11 @@ namespace CSC533
             while (agenda.Count != 0)
             {
                 string P = agenda.Pop();
-                log += "Checking all rules that contain " + P + "\r\n";
+                log += "Checking all rules that contain " + P + ".\r\n";
 
                 if (P == symbol)
                 {
-                    log += "Found " + symbol + " to be true\r\n";
+                    log += "Found " + symbol + " to be true.\r\n";
                     return true;
                 }
 
@@ -139,12 +139,12 @@ namespace CSC533
                     {
                         if (rule.Premises.Contains(P))
                         {
-                            log += "The count of " + rule + " is reduced\r\n";
+                            log += "The count of " + rule + " is reduced.\r\n";
                             count[rule]--;
                             if (count[rule] == 0)
                             {
                                 agenda.Push(rule.Conclusion);
-                                log += "Add " + rule.Conclusion + " to the knowledge base\r\n";
+                                log += "Add " + rule.Conclusion + " to the knowledge base.\r\n";
                             }
                         }
                     }
