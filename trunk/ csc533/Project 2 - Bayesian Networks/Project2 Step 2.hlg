@@ -1,4 +1,4 @@
-Mon Nov 23 19:09:22 2009
+Tue Nov 24 14:19:28 2009
 
 
 Moral links:
@@ -113,7 +113,233 @@ Beliefs for chance nodes:
     Dyspnea:
 	Yes        0.0461244
 	No         0.953876
-Mon Nov 23 19:11:26 2009
+Tue Nov 24 14:22:35 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510279
+	No         0.994897
+
+    Smoking:
+	Yes        0.198619
+	No         0.801381
+
+    Bronchitis:
+	Yes        0.0730415
+	No         0.926958
+
+    LungCancer:
+	Yes        0.00294372
+	No         0.997056
+
+    Tuberculosis:
+	Yes        0.132728
+	No         0.867272
+
+    Dyspnea:
+	Yes        0.0842458
+	No         0.915754
+Tue Nov 24 14:23:35 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510279
+	No         0.994897
+
+    Smoking:
+	Yes        0.198619
+	No         0.801381
+
+    Bronchitis:
+	Yes        0.0730415
+	No         0.926958
+
+    LungCancer:
+	Yes        0.00294372
+	No         0.997056
+
+    Tuberculosis:
+	Yes        0.132728
+	No         0.867272
+
+    Dyspnea:
+	Yes        0.0842458
+	No         0.915754
+Tue Nov 24 14:23:51 2009
 
 
 Moral links:
@@ -202,8 +428,8 @@ Checking conditional probability potentials:
 Beliefs for chance nodes:
 
     CXRFindings:
-	Yes        0.263712
-	No         0.736288
+	Yes        0.260423
+	No         0.739577
 
     AsianTravel:
 	Yes        0.005
@@ -228,3 +454,4357 @@ Beliefs for chance nodes:
     Dyspnea:
 	Yes        0.0461244
 	No         0.953876
+Tue Nov 24 14:23:53 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings:
+	Yes        0.260423
+	No         0.739577
+
+    AsianTravel:
+	Yes        0.005
+	No         0.995
+
+    Smoking:
+	Yes        0.198
+	No         0.802
+
+    Bronchitis:
+	Yes        0.0729526
+	No         0.927047
+
+    LungCancer:
+	Yes        0.000907744
+	No         0.999092
+
+    Tuberculosis:
+	Yes        0.0411445
+	No         0.958856
+
+    Dyspnea:
+	Yes        0.0461244
+	No         0.953876
+Tue Nov 24 14:24:15 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for CXRFindings sum to different values:
+    min = 1
+    max = 1.1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings:
+	Yes        0.260436
+	No         0.739564
+
+    AsianTravel:
+	Yes        0.005
+	No         0.995
+
+    Smoking:
+	Yes        0.198
+	No         0.802
+
+    Bronchitis:
+	Yes        0.0729526
+	No         0.927047
+
+    LungCancer:
+	Yes        0.000907744
+	No         0.999092
+
+    Tuberculosis:
+	Yes        0.0411445
+	No         0.958856
+
+    Dyspnea:
+	Yes        0.0461244
+	No         0.953876
+Tue Nov 24 14:24:31 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510278
+	No         0.994897
+
+    Smoking:
+	Yes        0.198634
+	No         0.801366
+
+    Bronchitis:
+	Yes        0.0730436
+	No         0.926956
+
+    LungCancer:
+	Yes        0.00299219
+	No         0.997008
+
+    Tuberculosis:
+	Yes        0.132722
+	No         0.867278
+
+    Dyspnea:
+	Yes        0.0842617
+	No         0.915738
+Tue Nov 24 14:24:47 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for CXRFindings sum to different values:
+    min = 0.945455
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510278
+	No         0.994897
+
+    Smoking:
+	Yes        0.198625
+	No         0.801375
+
+    Bronchitis:
+	Yes        0.0730424
+	No         0.926958
+
+    LungCancer:
+	Yes        0.00296423
+	No         0.997036
+
+    Tuberculosis:
+	Yes        0.132725
+	No         0.867275
+
+    Dyspnea:
+	Yes        0.0842526
+	No         0.915747
+Tue Nov 24 14:25:05 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510278
+	No         0.994897
+
+    Smoking:
+	Yes        0.198625
+	No         0.801375
+
+    Bronchitis:
+	Yes        0.0730424
+	No         0.926958
+
+    LungCancer:
+	Yes        0.00296423
+	No         0.997036
+
+    Tuberculosis:
+	Yes        0.132725
+	No         0.867275
+
+    Dyspnea:
+	Yes        0.0842526
+	No         0.915747
+Tue Nov 24 14:25:33 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for CXRFindings sum to different values:
+    min = 0.388846
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0051029
+	No         0.994897
+
+    Smoking:
+	Yes        0.19838
+	No         0.80162
+
+    Bronchitis:
+	Yes        0.0730072
+	No         0.926993
+
+    LungCancer:
+	Yes        0.00215783
+	No         0.997842
+
+    Tuberculosis:
+	Yes        0.132833
+	No         0.867167
+
+    Dyspnea:
+	Yes        0.0839878
+	No         0.916012
+Tue Nov 24 14:26:05 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0051029
+	No         0.994897
+
+    Smoking:
+	Yes        0.19838
+	No         0.80162
+
+    Bronchitis:
+	Yes        0.0730072
+	No         0.926993
+
+    LungCancer:
+	Yes        0.00215783
+	No         0.997842
+
+    Tuberculosis:
+	Yes        0.132833
+	No         0.867167
+
+    Dyspnea:
+	Yes        0.0839878
+	No         0.916012
+Tue Nov 24 14:26:18 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510311
+	No         0.994897
+
+    Smoking:
+	Yes        0.197969
+	No         0.802031
+
+    Bronchitis:
+	Yes        0.0729482
+	No         0.927052
+
+    LungCancer:
+	Yes        0.000806417
+	No         0.999194
+
+    Tuberculosis:
+	Yes        0.133013
+	No         0.866987
+
+    Dyspnea:
+	Yes        0.083544
+	No         0.916456
+Tue Nov 24 14:26:29 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510311
+	No         0.994897
+
+    Smoking:
+	Yes        0.197969
+	No         0.802031
+
+    Bronchitis:
+	Yes        0.0729482
+	No         0.927052
+
+    LungCancer:
+	Yes        0.000806417
+	No         0.999194
+
+    Tuberculosis:
+	Yes        0.133013
+	No         0.866987
+
+    Dyspnea:
+	Yes        0.083544
+	No         0.916456
+Tue Nov 24 14:26:30 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510311
+	No         0.994897
+
+    Smoking:
+	Yes        0.197969
+	No         0.802031
+
+    Bronchitis:
+	Yes        0.0729482
+	No         0.927052
+
+    LungCancer:
+	Yes        0.000806417
+	No         0.999194
+
+    Tuberculosis:
+	Yes        0.133013
+	No         0.866987
+
+    Dyspnea:
+	Yes        0.083544
+	No         0.916456
+Tue Nov 24 14:26:55 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00510278
+	No         0.994897
+
+    Smoking:
+	Yes        0.19857
+	No         0.80143
+
+    Bronchitis:
+	Yes        0.0730345
+	No         0.926966
+
+    LungCancer:
+	Yes        0.0027818
+	No         0.997218
+
+    Tuberculosis:
+	Yes        0.132721
+	No         0.867279
+
+    Dyspnea:
+	Yes        0.0841867
+	No         0.915813
+Tue Nov 24 14:28:05 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 1
+    max = 1.04944
+
+
+Beliefs for chance nodes:
+
+    CXRFindings:
+	Yes        0.28583
+	No         0.71417
+
+    AsianTravel:
+	Yes        0.005
+	No         0.995
+
+    Smoking:
+	Yes        0.198
+	No         0.802
+
+    Bronchitis:
+	Yes        0.0729526
+	No         0.927047
+
+    LungCancer:
+	Yes        0.0386664
+	No         0.961334
+
+    Tuberculosis:
+	Yes        0.05
+	No         0.95
+
+    Dyspnea:
+	Yes        0.0637228
+	No         0.936277
+Tue Nov 24 14:29:00 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for Tuberculosis sum to different values:
+    min = 1
+    max = 1.05
+
+
+Beliefs for chance nodes:
+
+    CXRFindings:
+	Yes        0.285961
+	No         0.714039
+
+    AsianTravel:
+	Yes        0.005
+	No         0.995
+
+    Smoking:
+	Yes        0.198
+	No         0.802
+
+    Bronchitis:
+	Yes        0.0729526
+	No         0.927047
+
+    LungCancer:
+	Yes        0.0386664
+	No         0.961334
+
+    Tuberculosis:
+	Yes        0.0502262
+	No         0.949774
+
+    Dyspnea:
+	Yes        0.0638133
+	No         0.936187
+Tue Nov 24 14:29:33 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for Tuberculosis sum to different values:
+    min = 0.995238
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054267
+	No         0.994573
+
+    Smoking:
+	Yes        0.176099
+	No         0.823901
+
+    Bronchitis:
+	Yes        0.0698054
+	No         0.930195
+
+    LungCancer:
+	Yes        0.171899
+	No         0.828101
+
+    Tuberculosis:
+	Yes        0.139773
+	No         0.860227
+
+    Dyspnea:
+	Yes        0.149184
+	No         0.850816
+Tue Nov 24 14:29:39 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054267
+	No         0.994573
+
+    Smoking:
+	Yes        0.176099
+	No         0.823901
+
+    Bronchitis:
+	Yes        0.0698054
+	No         0.930195
+
+    LungCancer:
+	Yes        0.171899
+	No         0.828101
+
+    Tuberculosis:
+	Yes        0.139773
+	No         0.860227
+
+    Dyspnea:
+	Yes        0.149184
+	No         0.850816
+Tue Nov 24 14:29:57 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 0.98
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054461
+	No         0.994554
+
+    Smoking:
+	Yes        0.180935
+	No         0.819065
+
+    Bronchitis:
+	Yes        0.0705004
+	No         0.9295
+
+    LungCancer:
+	Yes        0.13546
+	No         0.86454
+
+    Tuberculosis:
+	Yes        0.143845
+	No         0.856155
+
+    Dyspnea:
+	Yes        0.137459
+	No         0.862541
+Tue Nov 24 14:30:10 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054461
+	No         0.994554
+
+    Smoking:
+	Yes        0.180935
+	No         0.819065
+
+    Bronchitis:
+	Yes        0.0705004
+	No         0.9295
+
+    LungCancer:
+	Yes        0.13546
+	No         0.86454
+
+    Tuberculosis:
+	Yes        0.143845
+	No         0.856155
+
+    Dyspnea:
+	Yes        0.137459
+	No         0.862541
+Tue Nov 24 14:30:20 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054369
+	No         0.994563
+
+    Smoking:
+	Yes        0.178642
+	No         0.821358
+
+    Bronchitis:
+	Yes        0.0701709
+	No         0.929829
+
+    LungCancer:
+	Yes        0.152737
+	No         0.847263
+
+    Tuberculosis:
+	Yes        0.141914
+	No         0.858086
+
+    Dyspnea:
+	Yes        0.143018
+	No         0.856982
+Tue Nov 24 14:30:30 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054369
+	No         0.994563
+
+    Smoking:
+	Yes        0.178642
+	No         0.821358
+
+    Bronchitis:
+	Yes        0.0701709
+	No         0.929829
+
+    LungCancer:
+	Yes        0.152737
+	No         0.847263
+
+    Tuberculosis:
+	Yes        0.141914
+	No         0.858086
+
+    Dyspnea:
+	Yes        0.143018
+	No         0.856982
+Tue Nov 24 14:30:38 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054369
+	No         0.994563
+
+    Smoking:
+	Yes        0.178642
+	No         0.821358
+
+    Bronchitis:
+	Yes        0.0701709
+	No         0.929829
+
+    LungCancer:
+	Yes        0.152737
+	No         0.847263
+
+    Tuberculosis:
+	Yes        0.141914
+	No         0.858086
+
+    Dyspnea:
+	Yes        0.143018
+	No         0.856982
+Tue Nov 24 14:30:41 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 0.992
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544475
+	No         0.994555
+
+    Smoking:
+	Yes        0.180598
+	No         0.819402
+
+    Bronchitis:
+	Yes        0.0704519
+	No         0.929548
+
+    LungCancer:
+	Yes        0.137999
+	No         0.862001
+
+    Tuberculosis:
+	Yes        0.143561
+	No         0.856439
+
+    Dyspnea:
+	Yes        0.138276
+	No         0.861724
+Tue Nov 24 14:30:49 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544475
+	No         0.994555
+
+    Smoking:
+	Yes        0.180598
+	No         0.819402
+
+    Bronchitis:
+	Yes        0.0704519
+	No         0.929548
+
+    LungCancer:
+	Yes        0.137999
+	No         0.862001
+
+    Tuberculosis:
+	Yes        0.143561
+	No         0.856439
+
+    Dyspnea:
+	Yes        0.138276
+	No         0.861724
+Tue Nov 24 14:30:50 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 1
+    max = 1.0025
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544228
+	No         0.994558
+
+    Smoking:
+	Yes        0.179984
+	No         0.820016
+
+    Bronchitis:
+	Yes        0.0703637
+	No         0.929636
+
+    LungCancer:
+	Yes        0.142627
+	No         0.857373
+
+    Tuberculosis:
+	Yes        0.143044
+	No         0.856956
+
+    Dyspnea:
+	Yes        0.139765
+	No         0.860235
+Tue Nov 24 14:31:00 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544228
+	No         0.994558
+
+    Smoking:
+	Yes        0.179984
+	No         0.820016
+
+    Bronchitis:
+	Yes        0.0703637
+	No         0.929636
+
+    LungCancer:
+	Yes        0.142627
+	No         0.857373
+
+    Tuberculosis:
+	Yes        0.143044
+	No         0.856956
+
+    Dyspnea:
+	Yes        0.139765
+	No         0.860235
+Tue Nov 24 14:31:01 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 1
+    max = 1.00116
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544115
+	No         0.994559
+
+    Smoking:
+	Yes        0.1797
+	No         0.8203
+
+    Bronchitis:
+	Yes        0.0703229
+	No         0.929677
+
+    LungCancer:
+	Yes        0.144766
+	No         0.855234
+
+    Tuberculosis:
+	Yes        0.142805
+	No         0.857195
+
+    Dyspnea:
+	Yes        0.140453
+	No         0.859547
+Tue Nov 24 14:31:05 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544115
+	No         0.994559
+
+    Smoking:
+	Yes        0.1797
+	No         0.8203
+
+    Bronchitis:
+	Yes        0.0703229
+	No         0.929677
+
+    LungCancer:
+	Yes        0.144766
+	No         0.855234
+
+    Tuberculosis:
+	Yes        0.142805
+	No         0.857195
+
+    Dyspnea:
+	Yes        0.140453
+	No         0.859547
+Tue Nov 24 14:31:06 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544115
+	No         0.994559
+
+    Smoking:
+	Yes        0.1797
+	No         0.8203
+
+    Bronchitis:
+	Yes        0.0703229
+	No         0.929677
+
+    LungCancer:
+	Yes        0.144766
+	No         0.855234
+
+    Tuberculosis:
+	Yes        0.142805
+	No         0.857195
+
+    Dyspnea:
+	Yes        0.140453
+	No         0.859547
+Tue Nov 24 14:31:12 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 1
+    max = 1.00108
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054401
+	No         0.99456
+
+    Smoking:
+	Yes        0.179438
+	No         0.820562
+
+    Bronchitis:
+	Yes        0.0702853
+	No         0.929715
+
+    LungCancer:
+	Yes        0.146739
+	No         0.853261
+
+    Tuberculosis:
+	Yes        0.142585
+	No         0.857415
+
+    Dyspnea:
+	Yes        0.141088
+	No         0.858912
+Tue Nov 24 14:31:26 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054401
+	No         0.99456
+
+    Smoking:
+	Yes        0.179438
+	No         0.820562
+
+    Bronchitis:
+	Yes        0.0702853
+	No         0.929715
+
+    LungCancer:
+	Yes        0.146739
+	No         0.853261
+
+    Tuberculosis:
+	Yes        0.142585
+	No         0.857415
+
+    Dyspnea:
+	Yes        0.141088
+	No         0.858912
+Tue Nov 24 14:31:28 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 1
+    max = 1.00057
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00543954
+	No         0.99456
+
+    Smoking:
+	Yes        0.179299
+	No         0.820701
+
+    Bronchitis:
+	Yes        0.0702653
+	No         0.929735
+
+    LungCancer:
+	Yes        0.147784
+	No         0.852216
+
+    Tuberculosis:
+	Yes        0.142468
+	No         0.857532
+
+    Dyspnea:
+	Yes        0.141425
+	No         0.858575
+Tue Nov 24 14:31:37 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00543954
+	No         0.99456
+
+    Smoking:
+	Yes        0.179299
+	No         0.820701
+
+    Bronchitis:
+	Yes        0.0702653
+	No         0.929735
+
+    LungCancer:
+	Yes        0.147784
+	No         0.852216
+
+    Tuberculosis:
+	Yes        0.142468
+	No         0.857532
+
+    Dyspnea:
+	Yes        0.141425
+	No         0.858575
+Tue Nov 24 14:31:42 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 0.997539
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544195
+	No         0.994558
+
+    Smoking:
+	Yes        0.179899
+	No         0.820101
+
+    Bronchitis:
+	Yes        0.0703515
+	No         0.929648
+
+    LungCancer:
+	Yes        0.143263
+	No         0.856737
+
+    Tuberculosis:
+	Yes        0.142973
+	No         0.857027
+
+    Dyspnea:
+	Yes        0.13997
+	No         0.86003
+Tue Nov 24 14:31:55 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544195
+	No         0.994558
+
+    Smoking:
+	Yes        0.179899
+	No         0.820101
+
+    Bronchitis:
+	Yes        0.0703515
+	No         0.929648
+
+    LungCancer:
+	Yes        0.143263
+	No         0.856737
+
+    Tuberculosis:
+	Yes        0.142973
+	No         0.857027
+
+    Dyspnea:
+	Yes        0.13997
+	No         0.86003
+Tue Nov 24 14:31:57 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 0.99964
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054423
+	No         0.994558
+
+    Smoking:
+	Yes        0.179988
+	No         0.820012
+
+    Bronchitis:
+	Yes        0.0703642
+	No         0.929636
+
+    LungCancer:
+	Yes        0.142599
+	No         0.857401
+
+    Tuberculosis:
+	Yes        0.143047
+	No         0.856953
+
+    Dyspnea:
+	Yes        0.139756
+	No         0.860244
+Tue Nov 24 14:32:07 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.0054423
+	No         0.994558
+
+    Smoking:
+	Yes        0.179988
+	No         0.820012
+
+    Bronchitis:
+	Yes        0.0703642
+	No         0.929636
+
+    LungCancer:
+	Yes        0.142599
+	No         0.857401
+
+    Tuberculosis:
+	Yes        0.143047
+	No         0.856953
+
+    Dyspnea:
+	Yes        0.139756
+	No         0.860244
+Tue Nov 24 14:32:09 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for LungCancer sum to different values:
+    min = 1
+    max = 1.00018
+
+
+Beliefs for chance nodes:
+
+    CXRFindings --> "Yes"
+
+    AsianTravel:
+	Yes        0.00544213
+	No         0.994558
+
+    Smoking:
+	Yes        0.179944
+	No         0.820056
+
+    Bronchitis:
+	Yes        0.070358
+	No         0.929642
+
+    LungCancer:
+	Yes        0.142925
+	No         0.857075
+
+    Tuberculosis:
+	Yes        0.143011
+	No         0.856989
+
+    Dyspnea:
+	Yes        0.139861
+	No         0.860139
+Tue Nov 24 14:35:35 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings:
+	Yes        0.8
+	No         0.2
+
+    AsianTravel:
+	Yes        0.00476065
+	No         0.995239
+
+    Smoking:
+	Yes        0.00736866
+	No         0.992631
+
+    Bronchitis --> "No"
+
+    LungCancer --> "Yes"
+
+    Tuberculosis --> "No"
+
+    Dyspnea:
+	Yes        0.4
+	No         0.6
+Tue Nov 24 14:35:37 2009
+
+
+Moral links:
+
+    Marrying LungCancer and Bronchitis
+    Marrying Tuberculosis and Bronchitis
+    Marrying Tuberculosis and LungCancer
+
+
+Triangulating prime component with 2 members:
+    AsianTravel, Tuberculosis
+This component is a clique of cost 4
+
+Triangulating prime component with 3 members:
+    Smoking, Bronchitis, LungCancer
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    Bronchitis, LungCancer, Tuberculosis, Dyspnea
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    CXRFindings, LungCancer, Tuberculosis
+This component is a clique of cost 8
+
+
+Total cost of triangulation for all prime components is 36
+
+
+Elimination sequence:
+
+    Smoking
+    Dyspnea
+    Bronchitis
+    CXRFindings
+    LungCancer
+    AsianTravel
+    Tuberculosis
+
+
+Cliques:
+
+Clique 4, 2 members, table size = 4:
+    Tuberculosis, AsianTravel
+
+Clique 3, 3 members, table size = 8:
+    Tuberculosis, LungCancer, CXRFindings
+
+Clique 2, 4 members, table size = 16:
+    Tuberculosis, LungCancer, Bronchitis, Dyspnea
+
+Clique 1, 3 members, table size = 8:
+    LungCancer, Bronchitis, Smoking
+
+Total clique table size: 36
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 1 member and table size = 2:
+    Tuberculosis
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    Tuberculosis, LungCancer
+
+Cliques 1 and 2 linked, separator has 2 members and table size = 4:
+    LungCancer, Bronchitis
+
+
+Assignment of potentials to cliques:
+
+    Node CXRFindings assigned to clique 3
+    Node AsianTravel assigned to clique 4
+    Node Smoking assigned to clique 1
+    Node Bronchitis assigned to clique 1
+    Node LungCancer assigned to clique 1
+    Node Tuberculosis assigned to clique 4
+    Node Dyspnea assigned to clique 2
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    CXRFindings:
+	Yes        0.8
+	No         0.2
+
+    AsianTravel:
+	Yes        0.00476065
+	No         0.995239
+
+    Smoking:
+	Yes        0.00736866
+	No         0.992631
+
+    Bronchitis --> "No"
+
+    LungCancer --> "Yes"
+
+    Tuberculosis --> "No"
+
+    Dyspnea:
+	Yes        0.4
+	No         0.6

@@ -125,9 +125,9 @@ node Dyspnea
 potential (CXRFindings | LungCancer Tuberculosis)
 {
     data
-     = ((( 0.75 0.25 )	%  LungCancer=Yes  Tuberculosis=Yes
-	 ( 0.8 0.2 ))	%  LungCancer=Yes  Tuberculosis=No
-	(( 0.84 0.16 )	%  LungCancer=No  Tuberculosis=Yes
+     = ((( 0.95 0.05 )	%  LungCancer=Yes  Tuberculosis=Yes
+	 ( 0.84 0.16 ))	%  LungCancer=Yes  Tuberculosis=No
+	(( 0.92 0.08 )	%  LungCancer=No  Tuberculosis=Yes
 	 ( 0.235 0.765 )));	%  LungCancer=No  Tuberculosis=No
 }
 
@@ -152,14 +152,14 @@ potential (LungCancer | Smoking)
 {
     data
      = (( 0.0023 0.9977 )	%  Smoking=Yes
-	( 0.0649885 0.935011 ));	%  Smoking=No
+	( 0.00056402 0.999436 ));	%  Smoking=No
 }
 
 potential (Tuberculosis | AsianTravel)
 {
     data
-     = (( 0.0956938 0.904306 )	%  AsianTravel=Yes
-	( 0.05 0.95 ));	%  AsianTravel=No
+     = (( 0.05 0.95 )	%  AsianTravel=Yes
+	( 0.0411 0.9589 ));	%  AsianTravel=No
 }
 
 potential (Dyspnea | Bronchitis LungCancer Tuberculosis)
@@ -171,6 +171,6 @@ potential (Dyspnea | Bronchitis LungCancer Tuberculosis)
 	  ( 0.207 0.793 )))	%  Bronchitis=Yes  LungCancer=No  Tuberculosis=No
 	((( 0.6 0.4 )	%  Bronchitis=No  LungCancer=Yes  Tuberculosis=Yes
 	  ( 0.4 0.6 ))	%  Bronchitis=No  LungCancer=Yes  Tuberculosis=No
-	 (( 0.4 0.6 )	%  Bronchitis=No  LungCancer=No  Tuberculosis=Yes
+	 (( 0.432 0.568 )	%  Bronchitis=No  LungCancer=No  Tuberculosis=Yes
 	  ( 0.015 0.985 ))));	%  Bronchitis=No  LungCancer=No  Tuberculosis=No
 }
