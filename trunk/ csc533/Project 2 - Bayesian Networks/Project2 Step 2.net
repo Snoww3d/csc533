@@ -1,0 +1,176 @@
+net
+{
+    node_size = (80 40);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+}
+
+node CXRFindings
+{
+    label = "";
+    position = (70 54);
+    states = ("Yes" "No");
+    HR_Group = "0";
+    HR_Desc = "Yes/no is somewhat simplistic, considering you can tell the difference between TB and neoplastic lesions on CXR, and each have different sensitivities and specificities for detection by CXR";
+    HR_State_1 = "";
+    HR_State_0 = "";
+}
+
+node AsianTravel
+{
+    label = "";
+    position = (105 224);
+    states = ("Yes" "No");
+    HR_LinkMode = "[Tuberculosis:0]";
+    HR_Group = "0";
+    HR_Desc = "";
+    HR_State_1 = "";
+    HR_State_0 = "";
+}
+
+node Smoking
+{
+    label = "";
+    position = (264 217);
+    states = ("Yes" "No");
+    HR_LinkMode = "[LungCancer:0][Bronchitis:0]";
+    HR_Group = "0";
+    HR_Desc = "possible to have more than 2 discrete values (or continuous values: pack-years)";
+    HR_State_1 = "";
+    HR_State_0 = "";
+}
+
+node Bronchitis
+{
+    label = "";
+    position = (325 147);
+    states = ("Yes" "No");
+    HR_Group = "0";
+    HR_Desc = "Assumed to mean chronic bronchitis";
+    HR_State_1 = "";
+    HR_State_0 = "";
+    HR_LinkMode = "[C1:0][Dyspnea:0]";
+}
+
+node LungCancer
+{
+    label = "";
+    position = (213 150);
+    states = ("Yes" "No");
+    HR_Group = "0";
+    HR_Desc = "Possible to have more discrete states: type of cancer, location, stage";
+    HR_State_1 = "";
+    HR_State_0 = "";
+    HR_LinkMode = "[C1:0][Dyspnea:0][CXRFindings:0]";
+}
+
+node Tuberculosis
+{
+    label = "";
+    position = (107 150);
+    states = ("Yes" "No");
+    HR_Group = "0";
+    HR_Desc = "Possible extra state: parenchymal involvement is what causes the dyspnea; could have yes/no for it";
+    HR_State_1 = "";
+    HR_State_0 = "";
+    HR_LinkMode = "[C1:0][Dyspnea:0][CXRFindings:0]";
+}
+
+node Dyspnea
+{
+    label = "";
+    position = (214 55);
+    states = ("Yes" "No");
+    HR_Group = "0";
+    HR_Desc = "";
+    HR_State_1 = "";
+    HR_State_0 = "";
+}
+
+potential (CXRFindings | LungCancer Tuberculosis)
+{
+    data
+     = ((( 0.95 0.05 )	%  LungCancer=Yes  Tuberculosis=Yes
+	 ( 0.84 0.16 ))	%  LungCancer=Yes  Tuberculosis=No
+	(( 0.92 0.08 )	%  LungCancer=No  Tuberculosis=Yes
+	 ( 0.235 0.765 )));	%  LungCancer=No  Tuberculosis=No
+}
+
+potential (AsianTravel)
+{
+    data = ( 0.005 0.995 );
+}
+
+potential (Smoking)
+{
+    data = ( 0.198 0.802 );
+}
+
+potential (Bronchitis | Smoking)
+{
+    data
+     = (( 0.1882 0.8118 )	%  Smoking=Yes
+	( 0.0445 0.9555 ));	%  Smoking=No
+}
+
+potential (LungCancer | Smoking)
+{
+    data
+     = (( 0.0023 0.9977 )	%  Smoking=Yes
+	( 0.00056402 0.999436 ));	%  Smoking=No
+}
+
+potential (Tuberculosis | AsianTravel)
+{
+    data
+     = (( 0.05 0.95 )	%  AsianTravel=Yes
+	( 0.0411 0.9589 ));	%  AsianTravel=No
+}
+
+potential (Dyspnea | Bronchitis LungCancer Tuberculosis)
+{
+    data
+     = (((( 0.75 0.25 )	%  Bronchitis=Yes  LungCancer=Yes  Tuberculosis=Yes
+	  ( 0.5 0.5 ))	%  Bronchitis=Yes  LungCancer=Yes  Tuberculosis=No
+	 (( 0.5 0.5 )	%  Bronchitis=Yes  LungCancer=No  Tuberculosis=Yes
+	  ( 0.207 0.793 )))	%  Bronchitis=Yes  LungCancer=No  Tuberculosis=No
+	((( 0.6 0.4 )	%  Bronchitis=No  LungCancer=Yes  Tuberculosis=Yes
+	  ( 0.4 0.6 ))	%  Bronchitis=No  LungCancer=Yes  Tuberculosis=No
+	 (( 0.432 0.568 )	%  Bronchitis=No  LungCancer=No  Tuberculosis=Yes
+	  ( 0.015 0.985 ))));	%  Bronchitis=No  LungCancer=No  Tuberculosis=No
+}
